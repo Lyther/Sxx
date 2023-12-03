@@ -1,0 +1,10 @@
+version="3.4.*"
+tags={
+	"Buildings"
+	"Species"
+	"Military"
+	"Leaders"
+}
+name="群星修仙传"
+supported_version="3.10.*"
+remote_file_id="2865408972"
