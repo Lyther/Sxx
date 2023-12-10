@@ -25,7 +25,7 @@ sxx_heaven_emperor = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.1
+			sxx_qiyun = 0.125
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -72,7 +72,7 @@ sxx_heaven_king = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.01
+			sxx_qiyun = 0.025
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -115,7 +115,7 @@ sxx_fairy_tanlang = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -172,7 +172,7 @@ sxx_fairy_jumen = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -226,7 +226,7 @@ sxx_fairy_lucun = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -280,7 +280,7 @@ sxx_fairy_wenqu = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -334,7 +334,7 @@ sxx_fairy_lianzhen = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -388,7 +388,7 @@ sxx_fairy_wuqu = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -443,7 +443,7 @@ sxx_fairy_pojun = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.005
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -499,7 +499,7 @@ sxx_supreme_fairy = {
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 		produces = {
-			sxx_qiyun = 0.001
+			sxx_qiyun = 0.0025
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}
@@ -552,7 +552,7 @@ sxx_other_fairy = {
 	resources = {
 		category = planet_sxx_other_fairies
 		produces = {
-			sxx_qiyun = 0.0002
+			sxx_qiyun = 0.001
 			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
 		}
 	}

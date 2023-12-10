@@ -241,6 +241,24 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.shader"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_relic_sxx_sphere"
+		texturefile = "gfx/interface/icons/relics/r_sxx_sphere.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_crystal"
+		texturefile = "gfx/interface/icons/relics/r_sxx_crystal.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_cube"
+		texturefile = "gfx/interface/icons/relics/r_sxx_cube.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
 
 	spriteType = {
 		name = "GFX_colony_type_sxx_stones"

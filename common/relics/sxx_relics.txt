@@ -426,3 +426,186 @@ r_sxx_star_eye = {
 		#is_sxx_sect = yes
 	}
 }
+
+r_sxx_sphere = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_sphere"
+	sound = "relic_activation_scales_of_the_worm"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_sphere_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_sphere_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.005
+		mult = r_sxx_sphere_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_sphere_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.01
+		mult = r_sxx_sphere_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_sphere_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_sphere
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_crystal = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_crystal"
+	sound = "ap_rift_event_15_time_crystal"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_crystal_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_crystal_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.0075
+		mult = r_sxx_crystal_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_crystal_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.015
+		mult = r_sxx_crystal_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_crystal_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_crystal
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_cube = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_cube"
+	sound = "relic_activation_intact_zro_soulstone"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_cube_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_cube_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.01
+		mult = r_sxx_cube_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_cube_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+		mult = r_sxx_cube_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_cube_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_cube
+		}
+		is_sxx_sect = yes
+	}
+}

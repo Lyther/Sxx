@@ -89,6 +89,31 @@ country_event = {
 	}
 }
 
+# 真仙长眠
+country_event = {
+	id = sxx_fairy.140
+	title = sxx_fairy.140.name
+	desc = sxx_fairy.140.desc
+	picture = GFX_evt_excavation_team
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = sxx_fairy_sleep_fired }
+	}
+
+	immediate = {
+		set_country_flag = sxx_fairy_sleep_fired
+	}
+
+	option = {
+		name = sxx_fairy.140.a
+	}
+	option = {
+		name = sxx_fairy.140.b
+	}
+}
+
 # 更新位面承载力 & 恢复凌霄宝殿
 country_event = {
 	id = sxx_fairy.150
@@ -1210,37 +1235,45 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			random_list = {
-				1 = { country_event = { id = sxx_fairy.506 } }
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							NOT = { has_global_flag = sxx_fairy_environment_1_0 }
-							has_country_flag = sxx_fairy_environment_1_0_known
-						}
-					}
-					country_event = { id = sxx_fairy.515 }
+			if = {
+				limit = {
+					NOT = { has_country_flag = sxx_fairy_desc_fired }
 				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							NOT = { has_global_flag = sxx_fairy_environment_1_1 }
-							has_country_flag = sxx_fairy_environment_1_1_known
+				country_event = { id = sxx_fairy.508 }
+			}
+			else = {
+				random_list = {
+					1 = { country_event = { id = sxx_fairy.506 } }
+					10 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOT = { has_global_flag = sxx_fairy_environment_1_0 }
+								has_country_flag = sxx_fairy_environment_1_0_known
+							}
 						}
+						country_event = { id = sxx_fairy.515 }
 					}
-					country_event = { id = sxx_fairy.516 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							NOT = { has_global_flag = sxx_fairy_environment_1_2 }
-							has_country_flag = sxx_fairy_environment_1_2_known
+					10 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOT = { has_global_flag = sxx_fairy_environment_1_1 }
+								has_country_flag = sxx_fairy_environment_1_1_known
+							}
 						}
+						country_event = { id = sxx_fairy.516 }
 					}
-					country_event = { id = sxx_fairy.517 }
+					10 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOT = { has_global_flag = sxx_fairy_environment_1_2 }
+								has_country_flag = sxx_fairy_environment_1_2_known
+							}
+						}
+						country_event = { id = sxx_fairy.517 }
+					}
 				}
 			}
 		}
@@ -1266,6 +1299,37 @@ country_event = {
 		add_monthly_resource_mult = {
 			resource = sxx_gongfa
 			value = 60
+		}
+	}
+}
+
+# 仙人修炼心得
+country_event = {
+	id = sxx_fairy.508
+	title = sxx_fairy.508.name
+	desc = sxx_fairy.508.desc
+	picture = GFX_evt_vortex
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = sxx_fairy_desc_fired
+	}
+
+	option = {
+		name = sxx_fairy.508.a
+	}
+	option = {
+		name = sxx_fairy.508.b
+		trigger = {
+			is_materialist = yes
+		}
+	}
+	option = {
+		name = sxx_fairy.508.c
+		trigger = {
+			has_origin = origin_sxx_abandoned_by_god
 		}
 	}
 }

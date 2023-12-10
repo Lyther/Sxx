@@ -104,9 +104,9 @@
  decision_sxx_heaven_ship_1_all:0"全体凝聚$trait_sxx_zhenxian$化身"
  decision_sxx_heaven_ship_1_all_desc:0"$decision_sxx_heaven_ship_1_desc$"
  decision_sxx_heaven_ship_2:0"凝聚$trait_sxx_xianwang$化身"
- decision_sxx_heaven_ship_2_desc:0"$trait_sxx_xianwang$本体全力出手会使位面接近崩溃，故而只得凝聚主战化身战斗。"
+ decision_sxx_heaven_ship_2_desc:0"$trait_sxx_xianwang$本体全力出手会使位面崩溃，故而只得凝聚主战化身战斗。"
  decision_sxx_heaven_ship_3:0"凝聚$trait_sxx_xiandi$化身"
- decision_sxx_heaven_ship_3_desc:0"$trait_sxx_xiandi$本体出手会使位面瞬间崩溃，故而只得凝聚主战化身战斗。"
+ decision_sxx_heaven_ship_3_desc:0"$trait_sxx_xiandi$本体的一丝气息即可使位面瞬间崩溃，故而只得凝聚主战化身战斗。"
 
  decision_sxx_cultivator_ship_controlled:0"£trigger_no£ §R星球被占领§!"
 

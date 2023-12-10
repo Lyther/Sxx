@@ -87,9 +87,10 @@ on_five_year_pulse_country = {
 		sxx_ai.51
 		sxx_ai.52
 		sxx_practice.2000
+		sxx_other_event.1000
 	}
 	random_events = {
-		75 = 0
+		#75 = 0 ?
 		25 = sxx_precursor.10000	# Private Collector has an artifact (previously: MTTH 20 years)
 		25 = sxx_precursor.10001	# Precursor Anomaly found (previously: MTTH 20 years)
 		#25 = sxx_precursor.311	# Neighbor offers to sell an artifact (previously: MTTH 20 years)
@@ -296,6 +297,7 @@ on_ship_destroyed_perp = {
 	events = {
 		sxx_crisis.1045
 		sxx_other_event.60
+		sxx_other_world_intruder.20
 		sxx_leader.110
 		sxx_task.80
 		sxx_task.85
@@ -447,6 +449,7 @@ on_arch_site_finished = {
 
 on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SXX_FAIRY = {
 	events = {
+		sxx_other_event.1100
 		sxx_task.270
 		sxx_planet_destruction.1
 	}
@@ -454,6 +457,7 @@ on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SXX_FAIRY = {
 
 on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SXX = {
 	events = {
+		sxx_other_event.1100
 		sxx_task.270
 		sxx_planet_destruction.1
 	}
@@ -461,6 +465,7 @@ on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SXX = {
 
 on_destroy_planet_with_PLANET_KILLER_CRACKER_SXX = {
 	events = {
+		sxx_other_event.1100
 		sxx_task.270
 		sxx_planet_destruction.5
 	}
@@ -468,6 +473,7 @@ on_destroy_planet_with_PLANET_KILLER_CRACKER_SXX = {
 
 on_destroy_planet_with_PLANET_KILLER_NEUTRON_SXX = {
 	events = {
+		sxx_other_event.1100
 		sxx_task.270
 		sxx_planet_destruction.10
 	}
