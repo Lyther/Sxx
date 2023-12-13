@@ -1507,7 +1507,7 @@ leader_trait_sxx_old = {
 		potential = {
 			always = yes
 		}
-		species_leader_exp_gain = -0.75
+		species_leader_exp_gain = -0.5
 	}
 	
 	leader_class = { official commander scientist }

@@ -164,7 +164,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				check_variable = { which = num_sxx_xiandi value > 4 }
+				check_variable = { which = num_sxx_xiandi value > 1 }
 			}
 			random_owned_pop = {
 				limit = {

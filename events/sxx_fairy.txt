@@ -358,7 +358,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_1|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_die
+			divide = value:sxx_fairy_environment_factor_die
 		}
 		modifier = {
 			factor = 10
@@ -480,7 +480,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_1|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_break
+			divide = value:sxx_fairy_environment_factor_break
 		}
 		modifier = {
 			factor = 0.75
@@ -555,7 +555,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_2|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_die
+			divide = value:sxx_fairy_environment_factor_die
 		}
 		modifier = {
 			factor = 10
@@ -677,7 +677,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_2|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_break
+			divide = value:sxx_fairy_environment_factor_break
 		}
 		modifier = {
 			factor = 0.75
@@ -755,7 +755,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_3|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_die
+			divide = value:sxx_fairy_environment_factor_die
 		}
 		modifier = {
 			factor = 10
@@ -880,7 +880,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_3|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_break
+			divide = value:sxx_fairy_environment_factor_break
 		}
 		modifier = {
 			factor = 0.75
@@ -958,7 +958,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_4|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_die
+			divide = value:sxx_fairy_environment_factor_die
 		}
 		modifier = {
 			factor = 10
@@ -1085,7 +1085,7 @@ country_event = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_4|
 		}
 		modifier = {
-			factor = value:sxx_fairy_environment_factor_break
+			divide = value:sxx_fairy_environment_factor_break
 		}
 		modifier = {
 			factor = 0.75
