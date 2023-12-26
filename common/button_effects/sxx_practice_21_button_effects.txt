@@ -147,11 +147,15 @@ sxx_button_practice_21_1_effect = {
 		check_variable = { which = sxx_practice_21 value < 1 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 0 STATE = final GONGFA = 30000 }
+		custom_tooltip = {
+			fail_text = sxx_not_get_this_practice
+			has_country_flag = sxx_get_practice_21
+		}
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 0 STATE = lianqi GONGFA = 100 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 1 GONGFA = -30000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 1 GONGFA = -100 }
 	}
 }
 
@@ -160,11 +164,11 @@ sxx_button_practice_21_2_effect = {
 		check_variable = { which = sxx_practice_21 value < 2 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 1 STATE = final GONGFA = 100000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 1 STATE = zhuji GONGFA = 300 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 2 GONGFA = -100000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 2 GONGFA = -300 }
 	}
 }
 
@@ -173,11 +177,11 @@ sxx_button_practice_21_3_effect = {
 		check_variable = { which = sxx_practice_21 value < 3 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 2 STATE = final GONGFA = 300000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 2 STATE = jindan GONGFA = 1000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 3 GONGFA = -300000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 3 GONGFA = -1000 }
 	}
 }
 
@@ -186,11 +190,11 @@ sxx_button_practice_21_4_effect = {
 		check_variable = { which = sxx_practice_21 value < 4 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 3 STATE = final GONGFA = 1000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 3 STATE = yuanying GONGFA = 3000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 4 GONGFA = -1000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 4 GONGFA = -3000 }
 	}
 }
 
@@ -199,11 +203,11 @@ sxx_button_practice_21_5_effect = {
 		check_variable = { which = sxx_practice_21 value < 5 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 4 STATE = final GONGFA = 3000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 4 STATE = huashen GONGFA = 10000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 5 GONGFA = -3000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 5 GONGFA = -10000 }
 	}
 }
 
@@ -212,11 +216,11 @@ sxx_button_practice_21_6_effect = {
 		check_variable = { which = sxx_practice_21 value < 6 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 5 STATE = final GONGFA = 10000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 5 STATE = lianxu GONGFA = 30000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 6 GONGFA = -10000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 6 GONGFA = -30000 }
 	}
 }
 
@@ -225,11 +229,11 @@ sxx_button_practice_21_7_effect = {
 		check_variable = { which = sxx_practice_21 value < 7 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 6 STATE = final GONGFA = 30000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 6 STATE = heti GONGFA = 100000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 7 GONGFA = -30000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 7 GONGFA = -100000 }
 	}
 }
 
@@ -238,11 +242,11 @@ sxx_button_practice_21_8_effect = {
 		check_variable = { which = sxx_practice_21 value < 8 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 7 STATE = final GONGFA = 100000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 7 STATE = dacheng GONGFA = 300000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 8 GONGFA = -100000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 8 GONGFA = -300000 }
 	}
 }
 
@@ -251,10 +255,60 @@ sxx_button_practice_21_9_effect = {
 		check_variable = { which = sxx_practice_21 value < 9 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 21 LEVEL = 8 STATE = final GONGFA = 300000000 }
+		sxx_get_practice_trigger = { NUM = 21 LEVEL = 8 STATE = dujie GONGFA = 1000000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 21 LEVEL = 9 GONGFA = -300000000 }
+		sxx_get_practice_effect = { NUM = 21 LEVEL = 9 GONGFA = -1000000 }
+	}
+}
+
+sxx_button_main_21_select_effect = {
+	potential = {
+		NOT = { check_variable = { which = sxx_main_select value = 21 } }
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = sxx_not_get_this_practice
+			has_country_flag = sxx_get_practice_21
+		}
+		custom_tooltip = {
+			fail_text = sxx_changing_practice_first
+			NOT = { has_modifier = sxx_change_practice_first_modifier }
+		}
+		custom_tooltip = {
+			fail_text = sxx_changing_practice
+			NOT = { has_modifier = sxx_change_practice_modifier }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				check_variable = { which = sxx_main_select value = 0 }
+			}
+			custom_tooltip = sxx_main_select_first_tooltip
+			hidden_effect = {
+				country_event = { id = sxx_practice.21 days = 360 }
+				add_modifier = { modifier = sxx_change_practice_first_modifier days = 360 }
+			}
+		}
+		else = {
+			custom_tooltip = sxx_main_select_tooltip
+			hidden_effect = { country_event = { id = sxx_practice.21 days = 1800 } }
+			add_modifier = { modifier = sxx_change_practice_modifier days = 1800 }
+		}
+	}
+}
+
+sxx_button_main_21_selected_effect = {
+	potential = {
+		check_variable = { which = sxx_main_select value = 21 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
 	}
 }

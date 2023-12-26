@@ -1,5 +1,23 @@
 ﻿l_simp_chinese:
 
+ ########################## 废弃 ##########################
+ sxx_default_auth_name:0"帝国"
+ sxx_default_auth_ruler_name:0"统治者"
+ sxx_default_auth_fairy_country_name:0"飞升帝国"
+
+ sxx_sect_name:0"宗门"
+ sxx_sect_ruler_name:0"宗主"
+ sxx_sect_fairy_country_name:0"仙门"
+
+ sxx_family_name:0"家族"
+ sxx_family_ruler_name:0"族长"
+ sxx_family_fairy_country_name:0"仙族"
+
+ sxx_dynasty_name:0"皇朝"
+ sxx_dynasty_ruler_name:0"皇者"
+ sxx_dynasty_fairy_country_name:0"仙朝"
+ #########################################################
+
  auth_sxx_sect:0"宗门制"
  auth_sxx_sect_desc:0"宗门由一位掌握所有权力的宗主管理。"
  AUTHORITY_SXX_SECT:0 "在统治者死后，用选举的方式选出下一任统治者，若统治者在位期间发觉统治者不够格，也可以随时重新选举。§H可以修炼。§!\n（与国民理念§H修仙宗门§!为等位替换关系，给需要选择其他国民理念的国家使用。与§H修仙宗门§!选择其一即可，显示两个都需选择的提示是显示错误，实际没有问题。）"
@@ -27,7 +45,7 @@
 
  civic_sxx_pills_master:0"炼丹之道"
  civic_sxx_pills_master_desc:0"这个宗门将丹道作为立宗之本，人人以炼丹为荣。"
- civic_tooltip_sxx_pills_master:0"£building£ §Y宗门大殿§!会额外提供£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!岗位\n£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!基础£sxx_pills£$sxx_pills$产出：§G+0.1§!"
+ civic_tooltip_sxx_pills_master:0"£building£ §Y$building_sxx_zongmen$§!会额外提供£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!岗位\n£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!基础£sxx_pills£$sxx_pills$产出：§G+0.1§!"
 
  councilor_sxx_liandanbuzhang:0 "炼丹部长"
  councilor_sxx_liandanbuzhang_female:0 "$councilor_sxx_liandanbuzhang$"
@@ -35,7 +53,7 @@
 
  civic_sxx_weapon_master:0"炼器之道"
  civic_sxx_weapon_master_desc:0"这个宗门将炼器作为立宗之本，炼器师与本命法宝人器合一，炼器即是修炼。"
- civic_tooltip_sxx_weapon_master:0"£building£ §Y宗门大殿§!会额外提供£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!岗位\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!修炼速度不再降低，反而会提高\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£consumer_goods£$consumer_goods$产出：§G+1§!\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£alloys£$alloys$产出：§G+0.5§!"
+ civic_tooltip_sxx_weapon_master:0"£building£ §Y$building_sxx_zongmen$§!会额外提供£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!岗位\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!修炼速度不再降低，反而会提高\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£consumer_goods£$consumer_goods$产出：§G+1§!\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£alloys£$alloys$产出：§G+0.5§!"
 
  councilor_sxx_lianqibuzhang:0 "炼器部长"
  councilor_sxx_lianqibuzhang_female:0 "$councilor_sxx_lianqibuzhang$"
@@ -43,7 +61,7 @@
 
  civic_sxx_zhenfa:0"阵法之道"
  civic_sxx_zhenfa_desc:0"这个宗门将阵道作为立宗之本，各种各样的阵法是他们强盛的根基。"
- civic_tooltip_sxx_zhenfa:0"£building£ §Y宗门大殿§!提供的£job_sxx_array_master£§Y$job_sxx_array_master_plural$§!岗位翻倍\n§Y行星阵法§!相关科技的出现率提升§G2§!倍"
+ civic_tooltip_sxx_zhenfa:0"£building£ §Y$building_sxx_zongmen$§!提供的£job_sxx_array_master£§Y$job_sxx_array_master_plural$§!岗位翻倍\n§Y行星阵法§!相关科技的出现率提升§G2§!倍"
 
  councilor_sxx_zhenfabuzhang:0 "阵法部长"
  councilor_sxx_zhenfabuzhang_female:0 "$councilor_sxx_zhenfabuzhang$"
@@ -51,7 +69,7 @@
 
  civic_sxx_kuilei:0"傀儡之道"
  civic_sxx_kuilei_desc:0"这个宗门善于炼制傀儡，他们制作的机械傀儡拥有可怕的威能。"
- civic_tooltip_sxx_kuilei:0"£job_sxx_elder£§Y$job_sxx_elder_plural$§!将会额外消耗£alloys£ $alloys$和£sxx_stones£ $sxx_stones$并产出§Y$mod_sxx_planet_kuilei_assembly_add$§!和£engineering£ §Y工程学研究点数§!，但会略微降低自身的修炼速度\n£job_sxx_elder£§Y$job_sxx_elder_plural$§!组装出的傀儡拥有与其相同的境界\n§H解锁决议：§!$decision_sxx_upgrade_kuilei$\n§H解锁决议：§!$decision_sxx_fusion_kuilei$"
+ civic_tooltip_sxx_kuilei:0"£building£ §Y$building_sxx_zongmen$§!会提供£job_sxx_kuilei_master£§Y$job_sxx_kuilei_master_plural$§!岗位\n£job_sxx_kuilei_master£§Y$job_sxx_kuilei_master_plural$§!将会消耗£alloys£ $alloys$和£sxx_stones£ $sxx_stones$并产出£mod_sxx_planet_kuilei_assembly_add£§Y$mod_sxx_planet_kuilei_assembly_add$§!，但会降低自身的修炼速度\n£job_sxx_kuilei_master£§Y$job_sxx_kuilei_master_plural$§!组装出的傀儡的修为由政策决定\n§H解锁决议：§!$decision_sxx_upgrade_kuilei$\n§H解锁决议：§!$decision_sxx_fusion_kuilei$"
 
  councilor_sxx_kuileibuzhang:0 "傀儡部长"
  councilor_sxx_kuileibuzhang_female:0 "$councilor_sxx_kuileibuzhang$"

@@ -1,4 +1,47 @@
 defined_text = {
+	name = GetSxxAuthName
+	text = {
+		trigger = {
+			is_sxx_sect = yes
+		}
+		localization_key = sxx_sect_name
+	}
+	default = sxx_default_auth_name
+}
+
+defined_text = {
+	name = GetSxxAuthRulerName
+	text = {
+		trigger = {
+			is_sxx_sect = yes
+		}
+		localization_key = sxx_sect_ruler_name
+	}
+	default = sxx_default_auth_ruler_name
+}
+
+defined_text = {
+	name = GetSxxAuthFairyCountryName
+	text = {
+		trigger = {
+			is_sxx_sect = yes
+		}
+		localization_key = sxx_sect_fairy_country_name
+	}
+	default = sxx_default_auth_fairy_country_name
+}
+
+defined_text = {
+	name = GetSxxPopXp
+	value = sxx_pop_xp
+}
+
+defined_text = {
+	name = GetSxxPopXpMax
+	value = value:sxx_pop_xp_max
+}
+
+defined_text = {
 	name = GetSxxPrecursorCiv
 	text = {
 		trigger = {
@@ -29,6 +72,28 @@ defined_text = {
 			has_country_flag = sxx_precursor5_artifact_recoverer
 		}
 		localization_key = sxx_precursor5_precursor_civ
+	}
+}
+
+defined_text = {
+	name = GetSxxKuileiAssemblyCountMax
+	text = {
+		trigger = {
+			has_policy_flag = sxx_kuilei_assembly_0
+		}
+		localization_key = sxx_kuilei_assembly_count_max_0
+	}
+	text = {
+		trigger = {
+			has_policy_flag = sxx_kuilei_assembly_1
+		}
+		localization_key = sxx_kuilei_assembly_count_max_1
+	}
+	text = {
+		trigger = {
+			has_policy_flag = sxx_kuilei_assembly_2
+		}
+		localization_key = sxx_kuilei_assembly_count_max_2
 	}
 }
 

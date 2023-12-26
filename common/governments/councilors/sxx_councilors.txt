@@ -106,8 +106,7 @@ councilor_sxx_kuileibuzhang = {
 	}
 	civic = civic_sxx_kuilei
 	modifier = {
-		planet_sxx_elders_alloys_upkeep_mult = -0.03
-		planet_sxx_elders_sxx_stones_upkeep_mult = -0.03
+		planet_sxx_kuilei_jobs_upkeep_mult = -0.03
 	}
 }
 

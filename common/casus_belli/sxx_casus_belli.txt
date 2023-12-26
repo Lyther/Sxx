@@ -8,12 +8,12 @@ cb_sxx_evil = {
 		NOT = { is_in_federation_with = from }
 	}
 	is_valid = {
-		has_total_war_cb = no
 		NOT = { is_overlord_to = FROM }
 		OR = {
 			is_subject = no
 			overlord = { NOT = { is_same_value = from } }
 		}
+		has_total_war_cb = no
 	}
 }
 
@@ -25,7 +25,6 @@ cb_sxx_anti_evil = {
 		NOT = { is_in_federation_with = from }
 	}
 	is_valid = {
-		has_total_war_cb = no
 		from = {
 			has_valid_civic = civic_sxx_evil_way
 		}
@@ -34,6 +33,7 @@ cb_sxx_anti_evil = {
 			is_subject = no
 			overlord = { NOT = { is_same_value = from } }
 		}
+		has_total_war_cb = no
 	}
 }
 

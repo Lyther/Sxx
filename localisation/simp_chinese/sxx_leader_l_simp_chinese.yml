@@ -29,7 +29,7 @@
  sxx_leader.2.c:0"$commander$"
 
  sxx_leader_pop_modifier:0"修仙领袖"
- sxx_leader_pop_modifier_tooltip:0"这位修士正在担任宗门的领袖\n$mod_sxx_planet_jobs_sxx_speed_2_produces_mult$：§G+250%§!\n$mod_sxx_planet_jobs_sxx_break_success_chance_produces_mult$：§G+5%§!\n修仙者人口产生的$SXX_STONES_UPKEEP$：§R+0.5§!"
+ sxx_leader_pop_modifier_tooltip:0"$mod_sxx_planet_jobs_sxx_speed_2_produces_mult$：§G+100%§!\n$mod_sxx_planet_jobs_sxx_break_success_chance_produces_mult$：§G+2%§!\n人口$SXX_STONES_UPKEEP$：§R+0.2§!\n$MOD_POP_HAPPINESS$：§G+5%§!\n$MOD_POP_POLITICAL_POWER$：§G+100%§!"
 
  MESSAGE_SXX_LINGMAI_UPGRADED_TITLE:0 "灵脉进阶完毕"
  MESSAGE_SXX_LINGMAI_UPGRADED_1:0 "$PLANET|Y$上的一座§Y下品灵脉§!已经进阶为§Y中品灵脉§!"

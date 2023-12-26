@@ -60,14 +60,85 @@
 			is_ruler = no
 			leader_class = official
 		}
-		planet_stability_add = 2
 		building_time_mult = -0.05 # planet_building_build_speed_mult = 0.1
 		planet_structures_cost_mult = -0.05
 		#planet_clear_blocker_time_mult = -0.05 #planet_clear_blocker_speed_mult = 0.1
 		#deposit_blockers_cost_mult = -0.05
 		planet_amenities_add = 10
-		planet_crime_add = -10
 		species_empire_size_mult = -0.05
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		building_time_mult = -0.025
+		planet_structures_cost_mult = -0.025
+		planet_amenities_add = 5
+		species_empire_size_mult = -0.025
+		mult = sxx_leader_state
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		planet_sxx_xiuxian_jobs_physics_research_produces_mult = 0.05
+		planet_sxx_xiuxian_jobs_society_research_produces_mult = 0.05
+		planet_sxx_xiuxian_jobs_engineering_research_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		planet_sxx_xiuxian_jobs_physics_research_produces_mult = 0.025
+		planet_sxx_xiuxian_jobs_society_research_produces_mult = 0.025
+		planet_sxx_xiuxian_jobs_engineering_research_produces_mult = 0.025
+		mult = sxx_leader_state
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		planet_stability_add = 2
+		planet_crime_add = -10
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		planet_stability_add = 1
+		planet_crime_add = -5
+		mult = sxx_leader_state
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		official_exp_gain = 0.02
+		mult = sxx_leader_state
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		scientist_exp_gain = 0.02
+		mult = sxx_leader_state
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		commander_exp_gain = 0.02
 		mult = sxx_leader_state
 	}
 	triggered_councilor_modifier = {

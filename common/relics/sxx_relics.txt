@@ -314,8 +314,8 @@ r_sxx_sword_tomb = {
 					is_sxx_potential_depletion = yes
 				}
 				random_list = {
-					20 = { sxx_pop_remove_potential_depletion = yes }
-					80 = {}
+					25 = { sxx_pop_remove_potential_depletion = yes }
+					75 = {}
 				}
 			}
 		}
@@ -401,6 +401,7 @@ r_sxx_star_eye = {
 		potential = {
 			always = yes
 		}
+		all_technology_research_speed = 0.25
 		pop_happiness = -0.05
 	}
 

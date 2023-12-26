@@ -27,8 +27,8 @@
 
 sxx_practice_modifier_7_1_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_7_1_1 = {
@@ -39,8 +39,8 @@ sxx_practice_modifier_7_1_1 = {
 
 sxx_practice_modifier_7_2_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_7_2_1 = {
@@ -51,8 +51,8 @@ sxx_practice_modifier_7_2_1 = {
 
 sxx_practice_modifier_7_3_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_7_3_1 = {
@@ -63,8 +63,8 @@ sxx_practice_modifier_7_3_1 = {
 
 sxx_practice_modifier_7_4_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_7_4_1 = {
@@ -75,8 +75,8 @@ sxx_practice_modifier_7_4_1 = {
 
 sxx_practice_modifier_7_5_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_7_5_1 = {
@@ -87,8 +87,8 @@ sxx_practice_modifier_7_5_1 = {
 
 sxx_practice_modifier_7_6_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_7_6_1 = {
@@ -99,8 +99,8 @@ sxx_practice_modifier_7_6_1 = {
 
 sxx_practice_modifier_7_7_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_7_7_1 = {
@@ -111,8 +111,8 @@ sxx_practice_modifier_7_7_1 = {
 
 sxx_practice_modifier_7_8_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
-	planet_sxx_stones_miners_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_7_8_1 = {
@@ -123,8 +123,8 @@ sxx_practice_modifier_7_8_1 = {
 
 sxx_practice_modifier_7_9_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_minerals_produces_mult = 0.2
-	planet_sxx_stones_miners_produces_mult = 0.2
+	planet_sxx_xiuxian_jobs_minerals_produces_mult = 0.2
+	planet_sxx_stones_miners_sxx_stones_produces_mult = 0.2
 }
 
 sxx_practice_modifier_7_9_1 = {

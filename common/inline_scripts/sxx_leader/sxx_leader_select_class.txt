@@ -26,6 +26,12 @@ create_leader = {
 			set_pop_flag = sxx_leader_pop_of@prev
 		}
 		add_skill_without_trait_selection = owner.modifier:leader_initial_skill
+		switch = {
+			trigger = leader_class
+			official = { add_skill_without_trait_selection = owner.modifier:official_initial_skill }
+			scientist = { add_skill_without_trait_selection = owner.modifier:scientist_initial_skill }
+			commander = { add_skill_without_trait_selection = owner.modifier:commander_initial_skill }
+		}
 		sxx_special_leader_effect = yes
 	}
 }

@@ -46,6 +46,14 @@ sxx_senior_job_control = {
 					has_policy_flag = sxx_senior_job_3
 					has_deficit = consumer_goods
 					has_deficit = alloys
+					AND = {
+						has_valid_civic = civic_sxx_weapon_master
+						has_technology = tech_sxx_lianqishi_1
+					}
+					AND = {
+						is_sxx_lianxu_country = yes
+						has_technology = tech_sxx_planetary_array
+					}
 				}
 			}
 		}
@@ -375,7 +383,6 @@ sxx_pills_using = {
 
 sxx_kuilei_assembly = {
 	potential = {
-		always = no
 		has_valid_civic = civic_sxx_kuilei
 	}
 
@@ -390,10 +397,7 @@ sxx_kuilei_assembly = {
 		}
 
 		AI_weight = {
-			modifier = {
-				factor = 10
-				is_sxx_zhuji_country = no
-			}
+			factor = 5 #This should make sure AIs stick to this policy
 		}
 	}
 
@@ -406,10 +410,6 @@ sxx_kuilei_assembly = {
 
 		modifier = {
 		}
-
-		AI_weight = {
-			factor = 5 #This should make sure AIs stick to this policy
-		}
 	}
 
 	option = {
@@ -417,17 +417,6 @@ sxx_kuilei_assembly = {
 
 		policy_flags = {
 			sxx_kuilei_assembly_2
-		}
-
-		modifier = {
-		}
-	}
-
-	option = {
-		name = "sxx_kuilei_assembly_stop"
-
-		policy_flags = {
-			sxx_kuilei_assembly_stop
 		}
 
 		modifier = {

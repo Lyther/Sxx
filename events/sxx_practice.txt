@@ -231,3 +231,48 @@ country_event = {
 		sxx_main_practice_select_effect = { NUM = 24 }
 	}
 }
+
+country_event = {
+	id = sxx_practice.30
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+	}
+
+	immediate = {
+		sxx_main_practice_select_effect = { NUM = 30 }
+	}
+}
+
+country_event = {
+	id = sxx_practice.31
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+	}
+
+	immediate = {
+		sxx_main_practice_select_effect = { NUM = 31 }
+	}
+}
+
+country_event = {
+	id = sxx_practice.32
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+	}
+
+	immediate = {
+		sxx_main_practice_select_effect = { NUM = 32 }
+	}
+}

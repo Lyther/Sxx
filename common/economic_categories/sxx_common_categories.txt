@@ -363,6 +363,58 @@ planet_sxx_array_masters = {
 	modifier_category = pop
 }
 
+planet_sxx_kuilei_jobs = {
+	parent = planet_sxx_xiuxian_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+planet_sxx_great_kuilei_masters = {
+	parent = planet_sxx_kuilei_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+planet_sxx_kuilei_masters = {
+	parent = planet_sxx_kuilei_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+planet_sxx_kuilei_apprentices = {
+	parent = planet_sxx_kuilei_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
 planet_sxx_xundaos = {
 	parent = planet_sxx_xiuxian_jobs
 	generate_add_modifiers = {
@@ -377,6 +429,19 @@ planet_sxx_xundaos = {
 }
 
 planet_sxx_other_cultivators = {
+	parent = planet_sxx_xiuxian_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+planet_sxx_servants = {
 	parent = planet_sxx_xiuxian_jobs
 	generate_add_modifiers = {
 		produces

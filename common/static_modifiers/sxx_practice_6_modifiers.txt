@@ -27,7 +27,7 @@
 
 sxx_practice_modifier_6_1_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_6_1_1 = {
@@ -38,7 +38,7 @@ sxx_practice_modifier_6_1_1 = {
 
 sxx_practice_modifier_6_2_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_6_2_1 = {
@@ -49,7 +49,7 @@ sxx_practice_modifier_6_2_1 = {
 
 sxx_practice_modifier_6_3_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_6_3_1 = {
@@ -60,7 +60,7 @@ sxx_practice_modifier_6_3_1 = {
 
 sxx_practice_modifier_6_4_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_6_4_1 = {
@@ -71,7 +71,7 @@ sxx_practice_modifier_6_4_1 = {
 
 sxx_practice_modifier_6_5_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_6_5_1 = {
@@ -82,7 +82,7 @@ sxx_practice_modifier_6_5_1 = {
 
 sxx_practice_modifier_6_6_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_6_6_1 = {
@@ -93,7 +93,7 @@ sxx_practice_modifier_6_6_1 = {
 
 sxx_practice_modifier_6_7_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 
 sxx_practice_modifier_6_7_1 = {
@@ -104,7 +104,7 @@ sxx_practice_modifier_6_7_1 = {
 
 sxx_practice_modifier_6_8_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.1
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_6_8_1 = {
@@ -115,7 +115,7 @@ sxx_practice_modifier_6_8_1 = {
 
 sxx_practice_modifier_6_9_0 = {
 	hide_from_country_list = yes
-	planet_sxx_stones_makers_produces_mult = 0.2
+	planet_sxx_stones_makers_sxx_stones_produces_mult = 0.2
 }
 
 sxx_practice_modifier_6_9_1 = {

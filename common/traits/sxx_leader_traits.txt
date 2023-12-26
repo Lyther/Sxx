@@ -1,4 +1,7 @@
-@sxx_subclass_trait_weight = 1000
+@sxx_trait_selectable_weight = 5000
+@sxx_trait_ai_weight = 1000
+
+############################################################### 固定 ##########################################################
 
 leader_trait_sxx_lost_connection_with_body = {
 	##negative = yes
@@ -52,7 +55,7 @@ leader_trait_sxx_to_fairy = {
 	randomized = no
 }
 
-############################################ 非内阁命定 ########################################
+############################################################### 总督 ##########################################################
 
 leader_trait_sxx_jiangdao = {
 	destiny_trait = yes
@@ -68,18 +71,26 @@ leader_trait_sxx_jiangdao = {
 		potential = {
 			always = yes
 		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.05
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.1
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = 0.01
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.01
 		mult = sxx_leader_state
 	}
 	triggered_sector_modifier = {
 		potential = {
 			always = yes
 		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.025
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.05
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = 0.005
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.005
 		mult = sxx_leader_state
 	}
 	leader_potential_add = {
 		sxx_leader_can_get_xiuxian_leader_trait = yes
+		OR = {
+			has_trait = subclass_official_governor
+			has_trait = subclass_scientist_governor
+		}
 		OR = {
 			has_trait = leader_trait_sxx_gongfa_produce
 			has_trait = leader_trait_sxx_gongfa_produce_2
@@ -91,10 +102,11 @@ leader_trait_sxx_jiangdao = {
 	}
 	leader_class = { official scientist }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
 	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -113,6 +125,7 @@ leader_trait_sxx_pills_saint = {
 			always = yes
 		}
 		planet_sxx_pills_makers_produces_mult = 0.1
+		planet_sxx_pills_makers_upkeep_mult = -0.02
 		mult = sxx_leader_state
 	}
 	triggered_sector_modifier = {
@@ -120,6 +133,7 @@ leader_trait_sxx_pills_saint = {
 			always = yes
 		}
 		planet_sxx_pills_makers_produces_mult = 0.05
+		planet_sxx_pills_makers_upkeep_mult = -0.01
 		mult = sxx_leader_state
 	}
 	leader_potential_add = {
@@ -132,10 +146,11 @@ leader_trait_sxx_pills_saint = {
 	}
 	leader_class = { official }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
 	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -154,6 +169,7 @@ leader_trait_sxx_weapon_saint = {
 			always = yes
 		}
 		planet_sxx_weapon_refiners_produces_mult = 0.1
+		planet_sxx_weapon_refiners_upkeep_mult = -0.02
 		mult = sxx_leader_state
 	}
 	triggered_sector_modifier = {
@@ -161,9 +177,9 @@ leader_trait_sxx_weapon_saint = {
 			always = yes
 		}
 		planet_sxx_weapon_refiners_produces_mult = 0.05
+		planet_sxx_weapon_refiners_upkeep_mult = -0.01
 		mult = sxx_leader_state
 	}
-	mult = sxx_leader_state
 	leader_potential_add = {
 		sxx_leader_can_get_xiuxian_leader_trait = yes
 		has_trait = subclass_official_governor
@@ -174,10 +190,52 @@ leader_trait_sxx_weapon_saint = {
 	}
 	leader_class = { official }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
 	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_sxx_xianmiao = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_sxx_xianmiao
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_cultivator_spawn_chance_produces_mult = 0.1
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_cultivator_spawn_chance_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_scientist_governor
+		owner = {
+			has_ascension_perk = ap_engineered_evolution
+		}
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -191,74 +249,29 @@ leader_trait_sxx_lingmai = {
 		COUNCIL = no
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sxx_lingmai_effect
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = leader_trait_sxx_lingmai_effect
+	}
+	triggered_desc = {
+		trigger = {
+			exists = planet
+		}
+		text = leader_trait_sxx_lingmai_effect_value_show
+	}
 	leader_potential_add = {
 		sxx_leader_can_get_xiuxian_leader_trait = yes
 		has_trait = subclass_scientist_governor
 	}
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
 	}
-	background_icon = "GFX_leader_background_destiny_1"
-}
-
-leader_trait_sxx_lianbao = {
-	destiny_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = scientist
-		ICON = GFX_leader_trait_sxx_lianbao
-		RARITY = paragon
-		COUNCIL = no
-		TIER = none
-	}
-	triggered_modifier = {
-		potential = {
-			always = yes
-		}
-		science_ship_survey_speed = 0.25
-		ship_anomaly_generation_chance_mult = 0.25
-		ship_anomaly_research_speed_mult = 0.25
-		ship_archaeological_site_excavation_speed_mult = 0.25
-		ship_archaeological_site_clues_add = 1
-		ship_astral_rift_clues_add = 1
-		ship_shield_mult = 1
-		ship_armor_mult = 1
-		ship_hull_mult = 1
-		ship_shield_regen_add_perc = 0.1
-		ship_armor_regen_add_perc = 0.1
-		ship_hull_regen_add_perc = 0.1
-		ship_ftl_jumpdrive_range_mult = 0.25
-		ship_jumpdrive_cooldown_mult = -0.1
-		ship_hyperlane_range_add = 2
-		ship_sensor_range_add = 1
-		ship_cloaking_strength_add = 1
-		ship_speed_mult = 0.25
-		ship_evasion_mult = 0.1
-		ship_disengage_chance_mult = 0.1
-		ship_disengage_opportunities_add = 1
-		fleet_mia_time_mult = -0.05
-		ships_upkeep_mult = 0.25
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_scientist_explorer
-		OR = {
-			has_trait = leader_trait_sxx_weapon_produce
-			has_trait = leader_trait_sxx_weapon_produce_2
-		}
-	}
-	leader_class = { scientist }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/pilot_weight_mult
-		#inline_script = paragon/governor_weight_mult
-		#inline_script = paragon/council_weight_mult
-	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -355,7 +368,7 @@ leader_trait_sxx_kexue = {
 	}
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		#inline_script = paragon/pilot_weight_mult
 		inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
@@ -368,6 +381,638 @@ leader_trait_sxx_kexue = {
 			owner = { is_materialist = no }
 		}
 	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_sxx_canbao = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_sxx_canbao
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_produces_mult = 0.05
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = -0.05
+		pop_growth_speed = -0.05
+		pop_happiness = -0.02
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_produces_mult = 0.025
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = -0.025
+		pop_growth_speed = -0.025
+		pop_happiness = -0.01
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_commander_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_sxx_daoshi = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_sxx_daoshi
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.5
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.25
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		OR = {
+			has_trait = subclass_official_governor
+			has_trait = subclass_scientist_governor
+		}
+	}
+	leader_class = { official scientist }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_daoshi_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_daoshi" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_sxx_daoshi
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 1
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.5
+		mult = sxx_leader_state
+	}
+	leader_class = { official scientist }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_stones_mine = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_stones_mine
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.05
+		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.025
+		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.025
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_official_governor
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_stones_mine_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_stones_mine" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_stones_mine
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
+		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.1
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.05
+		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	leader_class = { official }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_stones_make = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_stones_make
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_makers_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_makers_produces_mult = 0.025
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_official_governor
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_stones_make_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_stones_make" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_stones_make
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_makers_produces_mult = 0.1
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_sxx_stones_makers_produces_mult = 0.05
+		mult = sxx_leader_state
+	}
+	leader_class = { official }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_zhendao = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_sxx_zhendao
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_array_strength_mult = 0.01
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_array_strength_mult = 0.005
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		OR = {
+			has_trait = subclass_official_governor
+			has_trait = subclass_scientist_governor
+		}
+	}
+	leader_class = { official scientist }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { has_valid_civic = civic_sxx_zhenfa } }
+		}
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_zhendao_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_zhendao" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_sxx_zhendao
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_array_strength_mult = 0.02
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_array_strength_mult = 0.01
+		mult = sxx_leader_state
+	}
+	leader_class = { official scientist }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_kuilei = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_kuilei
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_kuilei_assembly_mult = 0.01
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_kuilei_assembly_mult = 0.005
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_official_governor
+		owner = { has_valid_civic = civic_sxx_kuilei }
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			factor = 0.5
+			owner = { is_materialist = no }
+		}
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_kuilei_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_kuilei" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_kuilei
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_kuilei_assembly_mult = 0.02
+		mult = sxx_leader_state
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_kuilei_assembly_mult = 0.01
+		mult = sxx_leader_state
+	}
+	leader_class = { official }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_wuchi = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_sxx_wuchi
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.01
+		sxx_planets_sxx_break_success_chance_produces_mult = 0.005
+		mult = sxx_leader_state
+	}
+	planet_modifier = {
+		pop_happiness = -0.05
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.005
+		sxx_planets_sxx_break_success_chance_produces_mult = 0.0025
+		mult = sxx_leader_state
+	}
+	sector_modifier = {
+		pop_happiness = -0.025
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_commander_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+}
+
+leader_trait_sxx_wuchi_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_sxx_wuchi" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_sxx_wuchi
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.02
+		sxx_planets_sxx_break_success_chance_produces_mult = 0.01
+		mult = sxx_leader_state
+	}
+	planet_modifier = {
+		pop_happiness = -0.05
+	}
+	triggered_sector_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.01
+		sxx_planets_sxx_break_success_chance_produces_mult = 0.005
+		mult = sxx_leader_state
+	}
+	sector_modifier = {
+		pop_happiness = -0.025
+	}
+	leader_class = { commander }
+	ai_weight = @sxx_trait_ai_weight
+}
+
+############################################################### 内阁 ##########################################################
+
+leader_trait_sxx_guanli = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_sxx_guanli
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = 0.01
+		planet_sxx_xiuxian_jobs_produces_mult = 0.02
+		planet_sxx_xiuxian_jobs_upkeep_mult = -0.01
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_official_economy_councilor
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_sxx_xianlu = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_sxx_xianlu
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.03
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_scientist_councilor
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_sxx_juejing = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_sxx_juejing
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.01
+		sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.01
+		army_morale = 0.2
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		has_trait = subclass_commander_councilor
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+############################################################### 领袖类别专属 ##########################################################
+
+leader_trait_sxx_lianbao = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_sxx_lianbao
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_modifier = {
+		potential = {
+			always = yes
+		}
+		science_ship_survey_speed = 0.25
+		ship_anomaly_generation_chance_mult = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.25
+		ship_archaeological_site_clues_add = 1
+		ship_astral_rift_clues_add = 1
+		ship_shield_mult = 1
+		ship_armor_mult = 1
+		ship_hull_mult = 1
+		ship_shield_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.1
+		ship_hull_regen_add_perc = 0.1
+		ship_ftl_jumpdrive_range_mult = 0.25
+		ship_jumpdrive_cooldown_mult = -0.1
+		ship_hyperlane_range_add = 2
+		ship_sensor_range_add = 1
+		ship_cloaking_strength_add = 1
+		ship_speed_mult = 0.25
+		ship_evasion_mult = 0.1
+		ship_disengage_chance_mult = 0.1
+		ship_disengage_opportunities_add = 1
+		fleet_mia_time_mult = -0.05
+		ships_upkeep_mult = 0.25
+		mult = sxx_leader_state
+	}
+	leader_potential_add = {
+		sxx_leader_can_get_xiuxian_leader_trait = yes
+		OR = {
+			has_trait = subclass_scientist_explorer
+			has_trait = subclass_scientist_scholar
+		}
+		OR = {
+			has_trait = leader_trait_sxx_weapon_produce
+			has_trait = leader_trait_sxx_weapon_produce_2
+		}
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+		inline_script = paragon/pilot_weight_mult
+		#inline_script = paragon/governor_weight_mult
+		#inline_script = paragon/council_weight_mult
+	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -405,7 +1050,7 @@ leader_trait_sxx_zhanzhen = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/pilot_weight_mult
 		#inline_script = paragon/governor_weight_mult
 		#inline_script = paragon/council_weight_mult
@@ -414,6 +1059,7 @@ leader_trait_sxx_zhanzhen = {
 			owner = { NOT = { has_valid_civic = civic_sxx_zhenfa } }
 		}
 	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
@@ -442,188 +1088,14 @@ leader_trait_sxx_huanshu = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 		inline_script = paragon/army_weight_mult
 	}
+	ai_weight = @sxx_trait_ai_weight
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-############################################ 内阁命定 ########################################
-
-leader_trait_sxx_guanli = {
-	destiny_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_guanli
-		RARITY = paragon
-		COUNCIL = yes
-		TIER = none
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = 0.01
-		planet_sxx_xiuxian_jobs_produces_mult = 0.02
-		planet_sxx_xiuxian_jobs_upkeep_mult = -0.01
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_official_economy_councilor
-	}
-	leader_class = { official }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/council_weight_mult
-	}
-	background_icon = "GFX_leader_background_destiny_1"
-}
-
-leader_trait_sxx_xianlu = {
-	destiny_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = scientist
-		ICON = GFX_leader_trait_sxx_xianlu
-		RARITY = paragon
-		COUNCIL = yes
-		TIER = none
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.03
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_scientist_councilor
-	}
-	leader_class = { scientist }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/council_weight_mult
-	}
-	background_icon = "GFX_leader_background_destiny_1"
-}
-
-leader_trait_sxx_juejing = {
-	destiny_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = commander
-		ICON = GFX_leader_trait_sxx_juejing
-		RARITY = paragon
-		COUNCIL = yes
-		TIER = none
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.01
-		sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.01
-		army_morale = 0.2
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		NOT = { has_trait = subclass_commander_governor }
-	}
-	leader_class = { commander }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/council_weight_mult
-	}
-	background_icon = "GFX_leader_background_destiny_1"
-}
-
-############################################ 内阁老练 ########################################
-
-
-############################################ 非内阁老练 ########################################
-
-leader_trait_sxx_wuchi = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = commander
-		ICON = GFX_leader_trait_sxx_wuchi
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.005
-		mult = sxx_leader_state
-	}
-	planet_modifier = {
-		pop_happiness = -0.05
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.0025
-		mult = sxx_leader_state
-	}
-	sector_modifier = {
-		pop_happiness = -0.025
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		OR = {
-			has_trait = subclass_commander_admiral
-			has_trait = subclass_commander_general
-		}
-	}
-	leader_class = { commander }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		#inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_sxx_wuchi_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_wuchi" }
-	inline_script = {
-		script = trait/icon
-		CLASS = commander
-		ICON = GFX_leader_trait_sxx_wuchi
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.01
-		mult = sxx_leader_state
-	}
-	planet_modifier = {
-		pop_happiness = -0.05
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.005
-		mult = sxx_leader_state
-	}
-	sector_modifier = {
-		pop_happiness = -0.025
-	}
-	leader_class = { commander }
-}
+################################################################# 资源 #####################################################
 
 leader_trait_sxx_gongfa_produce = {
 	veteran_class_locked_trait = yes
@@ -667,8 +1139,9 @@ leader_trait_sxx_gongfa_produce = {
 		leader_trait_sxx_weapon_produce_2
 	}
 	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
+		weight = @sxx_trait_selectable_weight
 	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
 leader_trait_sxx_gongfa_produce_2 = {
@@ -710,6 +1183,7 @@ leader_trait_sxx_gongfa_produce_2 = {
 		leader_trait_sxx_weapon_produce
 		leader_trait_sxx_weapon_produce_2
 	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
 leader_trait_sxx_pills_produce = {
@@ -789,7 +1263,10 @@ leader_trait_sxx_pills_produce = {
 		leader_trait_sxx_weapon_produce
 		leader_trait_sxx_weapon_produce_2
 	}
-	selectable_weight = @sxx_subclass_trait_weight
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
 leader_trait_sxx_pills_produce_2 = {
@@ -867,6 +1344,7 @@ leader_trait_sxx_pills_produce_2 = {
 		leader_trait_sxx_weapon_produce
 		leader_trait_sxx_weapon_produce_2
 	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
 leader_trait_sxx_weapon_produce = {
@@ -962,7 +1440,10 @@ leader_trait_sxx_weapon_produce = {
 		leader_trait_sxx_pills_produce
 		leader_trait_sxx_pills_produce_2
 	}
-	selectable_weight = @sxx_subclass_trait_weight
+	selectable_weight = {
+		weight = @sxx_trait_selectable_weight
+	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
 leader_trait_sxx_weapon_produce_2 = {
@@ -1056,338 +1537,10 @@ leader_trait_sxx_weapon_produce_2 = {
 		leader_trait_sxx_pills_produce
 		leader_trait_sxx_pills_produce_2
 	}
+	ai_weight = @sxx_trait_ai_weight
 }
 
-leader_trait_sxx_daoshi = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = GFX_leader_trait_sxx_daoshi
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.5
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.25
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-	}
-	leader_class = { official scientist }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		#inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_sxx_daoshi_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_daoshi" }
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = GFX_leader_trait_sxx_daoshi
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 1
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 0.5
-		mult = sxx_leader_state
-	}
-	leader_class = { official scientist }
-}
-
-leader_trait_sxx_stones_mine = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_stones_mine
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.05
-		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.05
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.025
-		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.025
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_official_governor
-	}
-	leader_class = { official }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		#inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_sxx_stones_mine_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_stones_mine" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_stones_mine
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.1
-		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.1
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_miners_sxx_stones_produces_mult = 0.05
-		planet_sxx_secular_stones_miners_sxx_stones_produces_mult = 0.05
-		mult = sxx_leader_state
-	}
-	leader_class = { official }
-}
-
-leader_trait_sxx_stones_make = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_stones_make
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_makers_produces_mult = 0.05
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_makers_produces_mult = 0.025
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_official_governor
-	}
-	leader_class = { official }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		#inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_sxx_stones_make_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_stones_make" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_stones_make
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_makers_produces_mult = 0.1
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_sxx_stones_makers_produces_mult = 0.05
-		mult = sxx_leader_state
-	}
-	leader_class = { official }
-}
-
-leader_trait_sxx_zhendao = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = GFX_leader_trait_sxx_zhendao
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_array_strength_mult = 0.01
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_array_strength_mult = 0.005
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-	}
-	leader_class = { official scientist }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		modifier = {
-			factor = 0.5
-			owner = { NOT = { has_valid_civic = civic_sxx_zhenfa } }
-		}
-	}
-}
-
-leader_trait_sxx_zhendao_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_zhendao" }
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = GFX_leader_trait_sxx_zhendao
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_array_strength_mult = 0.02
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_array_strength_mult = 0.01
-		mult = sxx_leader_state
-	}
-	leader_class = { official scientist }
-}
-
-leader_trait_sxx_kuilei = {
-	veteran_class_locked_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_kuilei
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_kuilei_assembly_mult = 0.01
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_kuilei_assembly_mult = 0.005
-		mult = sxx_leader_state
-	}
-	leader_potential_add = {
-		sxx_leader_can_get_xiuxian_leader_trait = yes
-		has_trait = subclass_official_governor
-		owner = { has_valid_civic = civic_sxx_kuilei }
-	}
-	leader_class = { official }
-	selectable_weight = {
-		weight = @sxx_subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		modifier = {
-			factor = 0.5
-			owner = { is_materialist = no }
-		}
-	}
-}
-
-leader_trait_sxx_kuilei_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { "leader_trait_sxx_kuilei" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = GFX_leader_trait_sxx_kuilei
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_kuilei_assembly_mult = 0.02
-		mult = sxx_leader_state
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		sxx_planet_kuilei_assembly_mult = 0.01
-		mult = sxx_leader_state
-	}
-	leader_class = { official }
-}
-
-############################# 事件特质 ###############################
+################################################################# 事件 #####################################################
 
 leader_trait_sxx_qusi = {
 	cost = 0

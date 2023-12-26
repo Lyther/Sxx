@@ -394,6 +394,7 @@ sxx_other_world_intruder = {
 		needs_colony = no
 		hostile = yes
 		needs_border_access = no
+		auto_delete = no
 	}
 
 	custom_diplomacy = yes

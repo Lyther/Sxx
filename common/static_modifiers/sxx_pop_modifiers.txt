@@ -23,7 +23,7 @@ sxx_pop_recently_spawned_cultivator = {
 }
 
 sxx_leader_pop_modifier = {
-	#custom_tooltip = sxx_leader_pop_modifier_tooltip
+	custom_tooltip = sxx_leader_pop_modifier_tooltip
 	sxx_planet_jobs_sxx_speed_2_produces_mult = 1
 	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.02
 	pop_category_sxx_xiuxianzhe_1_sxx_stones_upkeep_add = 0.2

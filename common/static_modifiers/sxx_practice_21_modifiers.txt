@@ -1,91 +1,136 @@
-################# 天书 ######################
+################# 万劫不灭体 ######################
 
 sxx_practice_modifier_21_1_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 
 sxx_practice_modifier_21_1_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_2_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
-	
+
 sxx_practice_modifier_21_2_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_3_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 
 sxx_practice_modifier_21_3_1 = {
     hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_4_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 
 sxx_practice_modifier_21_4_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_5_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 	
 sxx_practice_modifier_21_5_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_6_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 
 sxx_practice_modifier_21_6_1 = {
     hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_7_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 
 sxx_practice_modifier_21_7_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_8_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 20
 }
 	
 sxx_practice_modifier_21_8_1 = {
 	hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.02
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
 }
 
 sxx_practice_modifier_21_9_0 = {
 	hide_from_country_list = yes
-	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	shipsize_sxx_cultivator_hull_add = 40
 }
 
 sxx_practice_modifier_21_9_1 = {
     hide_from_country_list = yes
-	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.04
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.04
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_normal_die_chance_upkeep_mult = -0.1
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.1
 }

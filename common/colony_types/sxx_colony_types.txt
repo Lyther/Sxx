@@ -66,6 +66,7 @@ col_sxx_heaven = {
 }
 
 ############################### 灵石 ##################################
+
 col_sxx_stones = {
 	icon = GFX_colony_type_sxx_stones
 
@@ -338,6 +339,7 @@ col_ring_sxx_lingyao = {
 	}
 
 	planet_modifier = {
+		planet_district_sxx_rw_lingyao_build_speed_mult = 0.25
 		planet_sxx_farmer_disciples_produces_mult = 0.25
 		pop_growth_speed = 0.1
 		planet_pop_assembly_mult = 0.1
@@ -516,7 +518,8 @@ col_capital_sxx_gongfa = {
 	}
 }
 
-col_capital_sxx_lingyao = { # 废弃
+# 废弃
+col_capital_sxx_lingyao = {
 	icon = GFX_colony_type_capital_sxx_lingyao
 
 	potential = {

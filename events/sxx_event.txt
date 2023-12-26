@@ -717,6 +717,29 @@ country_event = {
 	}
 }
 
+# 首次殖民常规星球时获得保底灵脉
+planet_event = {
+	id = sxx_event.15
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		habitable_planet_not_urban = yes
+		owner = {
+			is_sxx_sect = yes
+			NOT = { has_country_flag = sxx_get_guaranteed_lingmai }
+		}
+	}
+
+	immediate = {
+		add_deposit = d_sxx_lingmai_1
+		owner = {
+			set_country_flag = sxx_get_guaranteed_lingmai
+		}
+	}
+}
+
 # 新增人口去除特质 & 添加傀儡特质
 planet_event = {
 	id = sxx_event.20
@@ -992,19 +1015,56 @@ planet_event = {
 		sxx_call_pop_effect = { TRIGGER = is_unemployed }
 	}
 	option = {
-		name = sxx_event.50.b
+		name = sxx_event.50.b1
 		sxx_call_pop_effect = { JOB = sxx_other_cultivator }
 	}
 	option = {
-		name = sxx_event.50.c
-		sxx_call_pop_effect = { JOB = sxx_factotum_disciple }
+		name = sxx_event.50.b2
+		sxx_call_pop_effect = { JOB = sxx_servant }
 	}
 	option = {
-		name = sxx_event.50.d
+		name = sxx_event.50.c1
 		sxx_call_pop_effect = { JOB = sxx_supreme_elder }
 	}
 	option = {
+		name = sxx_event.50.c2
+		sxx_call_pop_effect = { JOB = sxx_elder }
+	}
+	option = {
+		name = sxx_event.50.c3
+		sxx_call_pop_effect = { JOB = sxx_deacon }
+	}
+	option = {
+		name = sxx_event.50.c4
+		sxx_call_pop_effect = { JOB = sxx_factotum_disciple }
+	}
+	option = {
 		name = sxx_event.50.close
+	}
+}
+
+# 每年若丹药短缺则自动降低一档丹药政策
+country_event = {
+	id = sxx_event.90
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		has_deficit = sxx_pills
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_policy_flag
+			sxx_pills_use_03 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_00 cooldown = no } }
+			sxx_pills_use_05 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_03 cooldown = no } }
+			sxx_pills_use_10 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_05 cooldown = no } }
+			sxx_pills_use_20 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_10 cooldown = no } }
+			sxx_pills_use_30 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_20 cooldown = no } }
+			sxx_pills_use_40 = { set_policy = { policy = sxx_pills_using option = sxx_pills_use_30 cooldown = no } }
+		}
 	}
 }
 
@@ -1246,7 +1306,7 @@ planet_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			factor = 10
 		}
 	}
 	option = {
@@ -1275,6 +1335,12 @@ planet_event = {
 			add_resource = {
 				sxx_stones = -3000
 				consumer_goods = -1500
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 100000
+				has_orbital_bombardment = yes
 			}
 		}
 	}
@@ -1306,6 +1372,9 @@ planet_event = {
 				consumer_goods = -5000
 			}
 		}
+		ai_chance = {
+			factor = 1000
+		}
 	}
 	option = {
 		name = sxx_event.120.d
@@ -1333,6 +1402,13 @@ planet_event = {
 			add_resource = {
 				sxx_stones = -3000
 				consumer_goods = -1500
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_capital = yes
 			}
 		}
 	}
@@ -1367,9 +1443,6 @@ planet_event = {
 	}
 	option = {
 		name = sxx_event.120.close
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 
@@ -1404,7 +1477,7 @@ event = {
 	}
 }
 
-# 大殿等级变动时傀儡组装清零
+# 大殿等级变动时傀儡组装减半
 planet_event = {
 	id = sxx_event.130
 	hide_window = yes
@@ -1427,7 +1500,7 @@ planet_event = {
 	}
 
 	immediate = {
-		set_variable = { which = sxx_kuilei_assembly_count value = 0 }
+		divide_variable = { which = sxx_kuilei_assembly_count value = 2 }
 	}
 }
 
@@ -1467,48 +1540,155 @@ country_event = {
 				save_event_target_as = sxx_kuilei_species
 			}
 		}
-		every_owned_planet = {
-			limit = {
-				is_sxx_lianqi_planet = yes
-			}
 
-			if = {
-				limit = {
-					NOT = { has_modifier = sxx_kuilei_upgrading_modifier }
-				}
-				change_variable = {
-					which = sxx_kuilei_assembly_count
-					value = value:sxx_planet_kuilei_assembly_value
-				}
-				while = {
-					count = 20
+		switch = {
+			trigger = has_policy_flag
+			sxx_kuilei_assembly_0 = {
+				every_owned_planet = {
+					limit = {
+						is_sxx_lianqi_planet = yes
+					}
+
 					if = {
 						limit = {
-							check_variable = { which = sxx_kuilei_assembly_count value >= 100 }
+							NOT = { has_modifier = sxx_kuilei_upgrading_modifier }
 						}
-						subtract_variable = { which = sxx_kuilei_assembly_count value = 100 }
-						create_pop = {
-							species = event_target:sxx_kuilei_species
-							effect = {
-								sxx_remove_xiuxian_trait = yes
-								modify_species = {
-									species = this
-									add_trait = trait_sxx_kuilei
-									remove_trait = trait_sxx_template
+						change_variable = {
+							which = sxx_kuilei_assembly_count
+							value = value:sxx_planet_kuilei_assembly_value
+						}
+						while = {
+							count = 10
+							if = {
+								limit = {
+									check_variable = { which = sxx_kuilei_assembly_count value >= 100 }
 								}
-								prev = {
-									switch = {
-										trigger = has_active_building
-										building_sxx_zongmen_1 = { prev = { set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 } modify_species = { species = this add_trait = trait_sxx_lianqi } } }
-										building_sxx_zongmen_2 = { prev = { set_pop_flag = sxx_zhuji set_variable = { which = sxx_pop_state value = 2 } modify_species = { species = this add_trait = trait_sxx_zhuji } } }
-										building_sxx_zongmen_3 = { prev = { set_pop_flag = sxx_jindan set_variable = { which = sxx_pop_state value = 3 } modify_species = { species = this add_trait = trait_sxx_jindan } } }
-										building_sxx_zongmen_4 = { prev = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } modify_species = { species = this add_trait = trait_sxx_yuanying } } }
-										building_sxx_zongmen_5 = { prev = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } modify_species = { species = this add_trait = trait_sxx_huashen } } }
-										building_sxx_zongmen_6 = { prev = { set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 } modify_species = { species = this add_trait = trait_sxx_lianxu } } }
-										building_sxx_zongmen_7 = { prev = { set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 } modify_species = { species = this add_trait = trait_sxx_heti } } }
-										building_sxx_zongmen_8 = { prev = { set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 } modify_species = { species = this add_trait = trait_sxx_dacheng } } }
-										building_sxx_zongmen_9 = { prev = { set_pop_flag = sxx_dujie set_variable = { which = sxx_pop_state value = 9 } modify_species = { species = this add_trait = trait_sxx_dujie } } }
-										building_sxx_zongmen_10 = { prev = { set_pop_flag = sxx_dujie set_variable = { which = sxx_pop_state value = 9 } modify_species = { species = this add_trait = trait_sxx_dujie } } }
+								subtract_variable = { which = sxx_kuilei_assembly_count value = 100 }
+								create_pop = {
+									species = event_target:sxx_kuilei_species
+									effect = {
+										sxx_remove_xiuxian_trait = yes
+										modify_species = {
+											species = this
+											add_trait = trait_sxx_kuilei
+											remove_trait = trait_sxx_template
+										}
+										prev = {
+											switch = {
+												trigger = has_active_building
+												building_sxx_zongmen_1 = { prev = { set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 } modify_species = { species = this add_trait = trait_sxx_lianqi } } }
+												building_sxx_zongmen_2 = { prev = { set_pop_flag = sxx_zhuji set_variable = { which = sxx_pop_state value = 2 } modify_species = { species = this add_trait = trait_sxx_zhuji } } }
+												building_sxx_zongmen_3 = { prev = { set_pop_flag = sxx_jindan set_variable = { which = sxx_pop_state value = 3 } modify_species = { species = this add_trait = trait_sxx_jindan } } }
+												building_sxx_zongmen_4 = { prev = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } modify_species = { species = this add_trait = trait_sxx_yuanying } } }
+												building_sxx_zongmen_5 = { prev = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } modify_species = { species = this add_trait = trait_sxx_huashen } } }
+												building_sxx_zongmen_6 = { prev = { set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 } modify_species = { species = this add_trait = trait_sxx_lianxu } } }
+												building_sxx_zongmen_7 = { prev = { set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 } modify_species = { species = this add_trait = trait_sxx_heti } } }
+												building_sxx_zongmen_8 = { prev = { set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 } modify_species = { species = this add_trait = trait_sxx_dacheng } } }
+												building_sxx_zongmen_9 = { prev = { set_pop_flag = sxx_dujie set_variable = { which = sxx_pop_state value = 9 } modify_species = { species = this add_trait = trait_sxx_dujie } } }
+												building_sxx_zongmen_10 = { prev = { set_pop_flag = sxx_dujie set_variable = { which = sxx_pop_state value = 9 } modify_species = { species = this add_trait = trait_sxx_dujie } } }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			sxx_kuilei_assembly_1 = {
+				every_owned_planet = {
+					limit = {
+						is_sxx_zhuji_planet = yes
+					}
+
+					if = {
+						limit = {
+							NOT = { has_modifier = sxx_kuilei_upgrading_modifier }
+						}
+						change_variable = {
+							which = sxx_kuilei_assembly_count
+							value = value:sxx_planet_kuilei_assembly_value
+						}
+						while = {
+							count = 10
+							if = {
+								limit = {
+									check_variable = { which = sxx_kuilei_assembly_count value >= 50 }
+								}
+								subtract_variable = { which = sxx_kuilei_assembly_count value = 50 }
+								create_pop = {
+									species = event_target:sxx_kuilei_species
+									effect = {
+										sxx_remove_xiuxian_trait = yes
+										modify_species = {
+											species = this
+											add_trait = trait_sxx_kuilei
+											remove_trait = trait_sxx_template
+										}
+										prev = {
+											switch = {
+												trigger = has_active_building
+												building_sxx_zongmen_2 = { prev = { set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 } modify_species = { species = this add_trait = trait_sxx_lianqi } } }
+												building_sxx_zongmen_3 = { prev = { set_pop_flag = sxx_zhuji set_variable = { which = sxx_pop_state value = 2 } modify_species = { species = this add_trait = trait_sxx_zhuji } } }
+												building_sxx_zongmen_4 = { prev = { set_pop_flag = sxx_jindan set_variable = { which = sxx_pop_state value = 3 } modify_species = { species = this add_trait = trait_sxx_jindan } } }
+												building_sxx_zongmen_5 = { prev = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } modify_species = { species = this add_trait = trait_sxx_yuanying } } }
+												building_sxx_zongmen_6 = { prev = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } modify_species = { species = this add_trait = trait_sxx_huashen } } }
+												building_sxx_zongmen_7 = { prev = { set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 } modify_species = { species = this add_trait = trait_sxx_lianxu } } }
+												building_sxx_zongmen_8 = { prev = { set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 } modify_species = { species = this add_trait = trait_sxx_heti } } }
+												building_sxx_zongmen_9 = { prev = { set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 } modify_species = { species = this add_trait = trait_sxx_dacheng } } }
+												building_sxx_zongmen_10 = { prev = { set_pop_flag = sxx_dujie set_variable = { which = sxx_pop_state value = 9 } modify_species = { species = this add_trait = trait_sxx_dujie } } }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			sxx_kuilei_assembly_2 = {
+				every_owned_planet = {
+					limit = {
+						is_sxx_jindan_planet = yes
+					}
+
+					if = {
+						limit = {
+							NOT = { has_modifier = sxx_kuilei_upgrading_modifier }
+						}
+						change_variable = {
+							which = sxx_kuilei_assembly_count
+							value = value:sxx_planet_kuilei_assembly_value
+						}
+						while = {
+							count = 10
+							if = {
+								limit = {
+									check_variable = { which = sxx_kuilei_assembly_count value >= 25 }
+								}
+								subtract_variable = { which = sxx_kuilei_assembly_count value = 25 }
+								create_pop = {
+									species = event_target:sxx_kuilei_species
+									effect = {
+										sxx_remove_xiuxian_trait = yes
+										modify_species = {
+											species = this
+											add_trait = trait_sxx_kuilei
+											remove_trait = trait_sxx_template
+										}
+										prev = {
+											switch = {
+												trigger = has_active_building
+												building_sxx_zongmen_3 = { prev = { set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 } modify_species = { species = this add_trait = trait_sxx_lianqi } } }
+												building_sxx_zongmen_4 = { prev = { set_pop_flag = sxx_zhuji set_variable = { which = sxx_pop_state value = 2 } modify_species = { species = this add_trait = trait_sxx_zhuji } } }
+												building_sxx_zongmen_5 = { prev = { set_pop_flag = sxx_jindan set_variable = { which = sxx_pop_state value = 3 } modify_species = { species = this add_trait = trait_sxx_jindan } } }
+												building_sxx_zongmen_6 = { prev = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } modify_species = { species = this add_trait = trait_sxx_yuanying } } }
+												building_sxx_zongmen_7 = { prev = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } modify_species = { species = this add_trait = trait_sxx_huashen } } }
+												building_sxx_zongmen_8 = { prev = { set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 } modify_species = { species = this add_trait = trait_sxx_lianxu } } }
+												building_sxx_zongmen_9 = { prev = { set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 } modify_species = { species = this add_trait = trait_sxx_heti } } }
+												building_sxx_zongmen_10 = { prev = { set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 } modify_species = { species = this add_trait = trait_sxx_dacheng } } }
+											}
+										}
 									}
 								}
 							}

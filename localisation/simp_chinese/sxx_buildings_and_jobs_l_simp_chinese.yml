@@ -24,9 +24,10 @@
  building_sxx_zongmen_9_desc:0"$building_sxx_zongmen_1_desc$"
  building_sxx_zongmen_10_desc:0"$building_sxx_zongmen_1_desc$"
 
- building_sxx_zongmen_kuilei_assembly_count_value:0"当前§H傀儡组装进度§!：§G[planet.sxx_kuilei_assembly_count]§!/100\n§R$building_sxx_zongmen$等级变动会重置该进度§!\n\n"
-
- #building_sxx_zongmen_effect_desc:0"宗门大殿的等级越高，星球上人口的修炼速度越快。修为超过宗门大殿等级的人口将成为£job_sxx_supreme_elder£§Y$job_sxx_supreme_elder$§!并停止修炼。"
+ building_sxx_zongmen_kuilei_assembly_count_value:0"当前§H傀儡组装进度§!：§G[planet.sxx_kuilei_assembly_count]§!/[Owner.GetSxxKuileiAssemblyCountMax]\n§R$building_sxx_zongmen$等级变动会使该进度减半§!\n\n"
+ sxx_kuilei_assembly_count_max_0:0"100"
+ sxx_kuilei_assembly_count_max_1:0"50"
+ sxx_kuilei_assembly_count_max_2:0"25"
 
  fail_text_is_sxx_lianqi_planet:0"§R需要有已启用的$sxx_trait_1$及以上$building_sxx_zongmen$§!"
  fail_text_is_sxx_zhuji_planet:0"§R需要有已启用的$sxx_trait_2$及以上$building_sxx_zongmen$§!"
@@ -61,58 +62,51 @@
  pop_category_sxx_xiuxianzhe_1:0"宗门弟子"
  pop_cat_sxx_xiuxianzhe_1:0 "宗门弟子"
  pop_cat_sxx_xiuxianzhe_1_plural:0 "宗门弟子"
- mod_pop_cat_sxx_xiuxianzhe_1_political_power:0 "$pop_cat_sxx_xiuxianzhe_1$政治权力"
+ mod_pop_cat_sxx_xiuxianzhe_1_political_power:0 "£political_power£ £pop_cat_sxx_xiuxianzhe_1£$pop_cat_sxx_xiuxianzhe_1_plural$政治权力"
  mod_pop_cat_sxx_xiuxianzhe_1_happiness:0 "$pop_cat_sxx_xiuxianzhe_1$幸福度"
  pop_cat_sxx_xiuxianzhe_1_desc:0 "宗门培养的弟子，是宗门未来的希望。"
 
  pop_category_sxx_xiuxianzhe_2:0"宗门执事"
  pop_cat_sxx_xiuxianzhe_2:0 "宗门执事"
  pop_cat_sxx_xiuxianzhe_2_plural:0 "宗门执事"
- mod_pop_cat_sxx_xiuxianzhe_2_political_power:0 "$pop_cat_sxx_xiuxianzhe_2$政治权力"
+ mod_pop_cat_sxx_xiuxianzhe_2_political_power:0 "£political_power£ £pop_cat_sxx_xiuxianzhe_2£$pop_cat_sxx_xiuxianzhe_2_plural$政治权力"
  mod_pop_cat_sxx_xiuxianzhe_2_happiness:0 "$pop_cat_sxx_xiuxianzhe_2$幸福度"
  pop_cat_sxx_xiuxianzhe_2_desc:0 "负责处理宗门各项事务的执事，是宗门的中坚力量。"
 
  pop_category_sxx_xiuxianzhe_3:0"宗门长老"
  pop_cat_sxx_xiuxianzhe_3:0 "宗门长老"
  pop_cat_sxx_xiuxianzhe_3_plural:0 "宗门长老"
- mod_pop_cat_sxx_xiuxianzhe_3_political_power:0 "$pop_cat_sxx_xiuxianzhe_3$政治权力"
+ mod_pop_cat_sxx_xiuxianzhe_3_political_power:0 "£political_power£ £pop_cat_sxx_xiuxianzhe_3£$pop_cat_sxx_xiuxianzhe_3_plural$政治权力"
  mod_pop_cat_sxx_xiuxianzhe_3_happiness:0 "$pop_cat_sxx_xiuxianzhe_3$幸福度"
  pop_cat_sxx_xiuxianzhe_3_desc:0 "位于幕后，只有处理真正的大事才会出面的长老，是宗门的支柱。"
 
  pop_category_sxx_xiuxianzhe_4:0"宗门劳务"
  pop_cat_sxx_xiuxianzhe_4:0 "宗门劳务"
  pop_cat_sxx_xiuxianzhe_4_plural:0 "宗门劳务"
- mod_pop_cat_sxx_xiuxianzhe_4_political_power:0 "$pop_cat_sxx_xiuxianzhe_4$政治权力"
+ mod_pop_cat_sxx_xiuxianzhe_4_political_power:0 "£political_power£ £pop_cat_sxx_xiuxianzhe_4£$pop_cat_sxx_xiuxianzhe_4_plural$政治权力"
  mod_pop_cat_sxx_xiuxianzhe_4_happiness:0 "$pop_cat_sxx_xiuxianzhe_4$幸福度"
  pop_cat_sxx_xiuxianzhe_4_desc:0 "为宗门生产必要资源的修士。"
 
  pop_category_sxx_heaven_1:0"仙人"
  pop_cat_sxx_heaven_1:0"仙人"
  pop_cat_sxx_heaven_1_plural:0"仙人"
- mod_pop_cat_sxx_heaven_1_political_power:0 "$pop_cat_sxx_heaven_1$政治权力"
+ mod_pop_cat_sxx_heaven_1_political_power:0 "£political_power£ £pop_cat_sxx_heaven_1£$pop_cat_sxx_heaven_1_plural$政治权力"
  mod_pop_cat_sxx_heaven_1_happiness:0 "$pop_cat_sxx_heaven_1$幸福度"
  pop_cat_sxx_heaven_1_desc:0 "得道仙人，超脱世外，长生不死。"
 
  pop_category_sxx_heaven_2:0"天王"
  pop_cat_sxx_heaven_2:0"天王"
  pop_cat_sxx_heaven_2_plural:0"天王"
- mod_pop_cat_sxx_heaven_2_political_power:0 "$pop_cat_sxx_heaven_2$政治权力"
+ mod_pop_cat_sxx_heaven_2_political_power:0 "£political_power£ £pop_cat_sxx_heaven_2£$pop_cat_sxx_heaven_2_plural$政治权力"
  mod_pop_cat_sxx_heaven_2_happiness:0 "$pop_cat_sxx_heaven_2$幸福度"
  pop_cat_sxx_heaven_2_desc:0 "超越真仙，得天庭天王尊位。"
 
  pop_category_sxx_heaven_3:0"天帝"
  pop_cat_sxx_heaven_3:0"天帝"
  pop_cat_sxx_heaven_3_plural:0"天帝"
- mod_pop_cat_sxx_heaven_3_political_power:0 "$pop_cat_sxx_heaven_3$政治权力"
+ mod_pop_cat_sxx_heaven_3_political_power:0 "£political_power£ £pop_cat_sxx_heaven_3£$pop_cat_sxx_heaven_3_plural$政治权力"
  mod_pop_cat_sxx_heaven_3_happiness:0 "$pop_cat_sxx_heaven_3$幸福度"
  pop_cat_sxx_heaven_3_desc:0 "天上地下，唯我独尊。"
-
- pop_category_sxx_heaven_3:0"仙人"
- pop_cat_sxx_heaven_1:0"仙人"
- pop_cat_sxx_heaven_1_plural:0"仙人"
- mod_pop_cat_sxx_heaven_1_political_power:0 "$pop_cat_sxx_heaven_1$政治权力"
- mod_pop_cat_sxx_heaven_1_happiness:0 "$pop_cat_sxx_heaven_1$幸福度"
- pop_cat_sxx_heaven_1_desc:0 "得道仙人，超脱世外，长生不死。"
 
  job_sxx_supreme_elder:0"太上长老"
  job_sxx_supreme_elder_plural:0"太上长老"
@@ -289,6 +283,30 @@
  mod_job_sxx_array_master_add:0 "$job_sxx_array_master$岗位"
  planet_sxx_array_masters:0"阵法师岗位"
 
+
+ planet_sxx_kuilei_jobs:0"傀儡制造岗位"
+
+ job_sxx_great_kuilei_master:0"大傀儡师"
+ job_sxx_great_kuilei_master_plural:0"大傀儡师"
+ job_sxx_great_kuilei_master_desc:0"大傀儡师是在傀儡一道上登峰造极的存在，每一位都是宗门的核心人物。"
+ job_sxx_great_kuilei_master_effect_desc:0"£job_sxx_great_kuilei_master£$job_sxx_great_kuilei_master_plural$消耗£alloys£§Y$alloys$§!和£sxx_stones£§Y$sxx_stones$§!，产生£mod_sxx_planet_kuilei_assembly_add£§Y$sxx_planet_kuilei_assembly_add$§!、£unity£ §Y$unity$§!和£engineering£ §Y工程学研究点数§!"
+ mod_job_sxx_great_kuilei_master_add:0 "$job_sxx_great_kuilei_master$岗位"
+ planet_sxx_great_kuilei_masters:0"大傀儡师岗位"
+
+ job_sxx_kuilei_master:0"傀儡师"
+ job_sxx_kuilei_master_plural:0"傀儡师"
+ job_sxx_kuilei_master_desc:0"傀儡师身怀制作强大傀儡的技艺，可以单独制作出傀儡。"
+ job_sxx_kuilei_master_effect_desc:0"£job_sxx_kuilei_master£$job_sxx_kuilei_master_plural$消耗£alloys£§Y$alloys$§!和£sxx_stones£§Y$sxx_stones$§!，产生£mod_sxx_planet_kuilei_assembly_add£§Y$sxx_planet_kuilei_assembly_add$§!、£unity£ §Y$unity$§!和£engineering£ §Y工程学研究点数§!"
+ mod_job_sxx_kuilei_master_add:0 "$job_sxx_kuilei_master$岗位"
+ planet_sxx_kuilei_masters:0"傀儡师岗位"
+
+ job_sxx_kuilei_apprentice:0"傀儡学徒"
+ job_sxx_kuilei_apprentice_plural:0"傀儡学徒"
+ job_sxx_kuilei_apprentice_desc:0"傀儡学徒跟随他们的师父学习制作傀儡的技艺，还可以帮助师父们完成一些辅助工作。"
+ job_sxx_kuilei_apprentice_effect_desc:0"£job_sxx_kuilei_apprentice£$job_sxx_kuilei_apprentice_plural$消耗£alloys£§Y$alloys$§!和£sxx_stones£§Y$sxx_stones$§!，产生£mod_sxx_planet_kuilei_assembly_add£§Y$sxx_planet_kuilei_assembly_add$§!、£unity£ §Y$unity$§!和£engineering£ §Y工程学研究点数§!"
+ mod_job_sxx_kuilei_apprentice_add:0 "$job_sxx_kuilei_apprentice$岗位"
+ planet_sxx_kuilei_apprentices:0"傀儡学徒岗位"
+
  d_sxx_lingmai_1:0"下品灵脉"
  d_sxx_lingmai_1_desc:0"下品灵脉，含有一些普通灵石。能够小幅提升星球上的天地灵气浓度。"
  d_sxx_lingmai_2:0"中品灵脉"
@@ -447,6 +465,11 @@
  job_sxx_other_cultivator_plural:0 "散修"
  job_sxx_other_cultivator_desc:0"不在宗门中的散修，虽说自由，但修炼十分艰难。"
  planet_sxx_other_cultivators:0"散修岗位"
+
+ job_sxx_servant:0"仆从"
+ job_sxx_servant_plural:0 "仆从"
+ job_sxx_servant_desc:0"这些无法修炼的存在被宗门所掌控，负责去做那些最为艰苦的体力劳动。它们位于宗门的最底层，并不被视为真正的修仙者。"
+ planet_sxx_servants:0"仆从岗位"
 
 
  building_sxx_xuemingbei:0"血冥碑"

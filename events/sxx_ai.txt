@@ -45,8 +45,7 @@ fleet_event = {
 							OR = {
 								is_sxx_planet_top_1_state = yes
 								is_sxx_planet_top_2_state = yes
-								has_job = sxx_supreme_elder
-								has_job = sxx_sealer
+								sxx_pop_is_above_planet_zongmen = yes
 								prev = { is_sxx_lianqi_planet = no }
 							}
 							is_sxx_fairy_pop = no
@@ -142,8 +141,7 @@ fleet_event = {
 							OR = {
 								is_sxx_planet_top_1_state = yes
 								is_sxx_planet_top_2_state = yes
-								has_job = sxx_supreme_elder
-								has_job = sxx_sealer
+								sxx_pop_is_above_planet_zongmen = yes
 								prev = { is_sxx_lianqi_planet = no }
 							}
 							is_sxx_fairy_pop = no
@@ -245,7 +243,7 @@ planet_event = {
 	}
 }
 
-# ai建造建筑
+# ai建造建筑并延迟触发召集人口
 country_event = {
 	id = sxx_ai.20
 
@@ -260,16 +258,16 @@ country_event = {
 
 	immediate = {
 		# 移除机器人组装厂
-		every_owned_planet = {
-			limit = {
-				OR = {
-					has_building = building_robot_assembly_complex
-					has_building = building_robot_assembly_plant
-				}
-			}
-			remove_building = building_robot_assembly_complex
-			remove_building = building_robot_assembly_plant
-		}
+		#every_owned_planet = {
+		#	limit = {
+		#		OR = {
+		#			has_building = building_robot_assembly_complex
+		#			has_building = building_robot_assembly_plant
+		#		}
+		#	}
+		#	remove_building = building_robot_assembly_complex
+		#	remove_building = building_robot_assembly_plant
+		#}
 
 		# 建造升仙台和灵石开采井
 		every_owned_planet = {
@@ -327,6 +325,7 @@ country_event = {
 			sxx_lianqi_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_lianqi_planet = no
 					}
@@ -336,6 +335,7 @@ country_event = {
 			sxx_zhuji_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_zhuji_planet = no
 						OR = {
@@ -351,6 +351,7 @@ country_event = {
 			sxx_jindan_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_jindan_planet = no
 						OR = {
@@ -366,6 +367,7 @@ country_event = {
 			sxx_yuanying_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_yuanying_planet = no
 						OR = {
@@ -381,6 +383,7 @@ country_event = {
 			sxx_huashen_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_huashen_planet = no
 						OR = {
@@ -396,6 +399,7 @@ country_event = {
 			sxx_lianxu_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_lianxu_planet = no
 						OR = {
@@ -411,6 +415,7 @@ country_event = {
 			sxx_heti_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_heti_planet = no
 						OR = {
@@ -426,6 +431,7 @@ country_event = {
 			sxx_dacheng_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_dacheng_planet = no
 						OR = {
@@ -441,6 +447,7 @@ country_event = {
 			sxx_dujie_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_dujie_planet = no
 						OR = {
@@ -456,6 +463,7 @@ country_event = {
 			sxx_fairy_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_fairy_planet = no
 						OR = {
@@ -472,6 +480,7 @@ country_event = {
 			sxx_heaven_country = {
 				every_owned_planet = {
 					limit = {
+						will_sxx_ai_build_zongmen = yes
 						is_occupied_flag = no
 						is_sxx_fairy_planet = no
 						OR = {
@@ -501,6 +510,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOT = {
 							has_building = building_sxx_liandanfang_4
 						}
@@ -518,6 +528,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_liandanfang_3
 							has_building = building_sxx_liandanfang_4
@@ -535,6 +546,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_liandanfang_2
 							has_building = building_sxx_liandanfang_3
@@ -552,6 +564,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_liandanfang_1
 							has_building = building_sxx_liandanfang_2
@@ -579,6 +592,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOT = {
 							has_building = building_sxx_lianqishi_4
 						}
@@ -596,6 +610,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_lianqishi_3
 							has_building = building_sxx_lianqishi_4
@@ -613,6 +628,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_lianqishi_2
 							has_building = building_sxx_lianqishi_3
@@ -630,6 +646,7 @@ country_event = {
 				}
 				every_owned_planet = {
 					limit = {
+						is_occupied_flag = no
 						NOR = {
 							has_building = building_sxx_lianqishi_1
 							has_building = building_sxx_lianqishi_2
@@ -753,6 +770,7 @@ country_event = {
 			capital_scope = {
 				if = {
 					limit = {
+						is_occupied_flag = no
 						NOT = { has_active_building = building_sxx_xuemingbei }
 						is_sxx_lianqi_planet = yes
 					}
@@ -761,23 +779,22 @@ country_event = {
 			}
 		}
 
-		# 首都建造神庙
+		# 建造神庙
 		if = {
 			limit = {
 				has_valid_civic = civic_sxx_faith
 			}
-			capital_scope = {
-				if = {
-					limit = {
-						NOT = { has_building = building_sxx_temple }
-						is_sxx_lianqi_planet = yes
-					}
-					add_building = building_sxx_temple
+			every_owned_planet = {
+				limit = {
+					is_occupied_flag = no
+					NOT = { has_building = building_sxx_temple }
+					is_sxx_lianqi_planet = yes
 				}
+				add_building = building_sxx_temple
 			}
 		}
 
-		# 首都建造极乐宫
+		# 建造极乐宫
 		if = {
 			limit = {
 				has_valid_civic = civic_sxx_hehuan
@@ -786,7 +803,10 @@ country_event = {
 					value > 20
 				}
 			}
-			capital_scope = {
+			every_owned_planet = {
+				limit = {
+					is_occupied_flag = no
+				}
 				if = {
 					limit = {
 						NOT = { has_building = building_sxx_jileshijie }
@@ -816,6 +836,9 @@ country_event = {
 				}
 			}
 			every_owned_planet = {
+				limit = {
+					is_occupied_flag = no
+				}
 				if = {
 					limit = {
 						NOT = { has_building = building_sxx_daogong }
@@ -883,6 +906,28 @@ country_event = {
 					}
 				}
 			}
+		}
+
+		country_event = { id = sxx_ai.21 days = 1 random = 29 }
+	}
+}
+
+# ai召集人口
+country_event = {
+	id = sxx_ai.21
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_sxx_fallen_1 = no
+		is_ai = yes
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_call_pop_effect = { JOB = sxx_other_cultivator }
 		}
 	}
 }
@@ -1409,12 +1454,65 @@ country_event = {
 		is_sxx_fallen_1 = no
 		is_sxx_final_country = yes
 		is_ai = yes
-		check_variable = { which = sxx_practice_21 value < 9 } # 没点完9重
+		check_variable = { which = sxx_practice_30 value < 9 } # 没点完9重
 		sxx_ai_finished_main_practice_at_present_state = yes
 	}
 
 	immediate = {
-		sxx_ai_get_practice_effect = { NUM = 21 GONGFA1 = 30000 GONGFA2 = 100000 STATE = final }
+		if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 0 STATE = final GONGFA = 1000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 1 GONGFA = -1000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 1 STATE = final GONGFA = 2000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 2 GONGFA = -2000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 2 STATE = final GONGFA = 3000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 3 GONGFA = -3000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 3 STATE = final GONGFA = 4000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 4 GONGFA = -4000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 4 STATE = final GONGFA = 5000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 5 GONGFA = -5000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 5 STATE = final GONGFA = 6000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 6 GONGFA = -6000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 6 STATE = final GONGFA = 7000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 7 GONGFA = -7000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 7 STATE = final GONGFA = 8000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 8 GONGFA = -8000000 }
+		}
+		else_if = {
+			limit = {
+				sxx_get_practice_trigger = { NUM = 30 LEVEL = 8 STATE = final GONGFA = 9000000 }
+			}
+			sxx_get_practice_effect = { NUM = 30 LEVEL = 9 GONGFA = -9000000 }
+		}
 	}
 }
 

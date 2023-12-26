@@ -11,6 +11,9 @@ origin_sxx_cultivator_family = {
 	}
 
 	modifier = {
+		planet_sxx_pills_makers_produces_mult = 0.1
+		planet_sxx_weapon_refiners_produces_mult = 0.1
+		sxx_array_strength_mult = 0.1
 	}
 
 	flags = { custom_start_screen }

@@ -2017,6 +2017,7 @@ country_event = {
 				set_leader_flag = sxx_pop_leader
 				set_variable = { which = sxx_leader_state value = 2 }
 				add_skill_without_trait_selection = owner.modifier:leader_initial_skill
+				add_skill_without_trait_selection = owner.modifier:official_initial_skill
 				event_target:sxx_hanli_pop = {
 					add_modifier = { modifier = sxx_leader_pop_modifier }
 					set_pop_flag = sxx_leader_pop_of@prev
@@ -2131,6 +2132,9 @@ ship_event = {
 				sxx_pills = 500
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
@@ -2161,6 +2165,9 @@ country_event = {
 		add_resource = {
 			sxx_pills = 500
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 
 	option = {
@@ -2168,6 +2175,149 @@ country_event = {
 		custom_tooltip = sxx_other_event.305.c.tooltip
 		hidden_effect = {
 			country_event = { id = sxx_other_event.305 days = 30 random = 150 }
+		}
+	}
+}
+
+# 孤独的练气士
+ship_event = {
+	id = sxx_other_event.320
+	title = sxx_other_event.320.name
+	desc = sxx_other_event.320.desc
+	picture = GFX_evt_alien_ruins
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	after = {
+		owner = {
+			add_resource = {
+				minor_artifacts = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.320.a
+		owner = {
+			add_modifier = { modifier = sxx_longly_cultivator_building_exp }
+		}
+	}
+	option = {
+		name = sxx_other_event.320.b
+		owner = {
+			add_modifier = { modifier = sxx_longly_cultivator_terraforming_exp }
+		}
+	}
+	option = {
+		name = sxx_other_event.320.c
+		owner = {
+			add_monthly_resource_mult = {
+				resource = sxx_gongfa
+				value = 12
+			}
+		}
+	}
+}
+
+# 万劫不灭
+ship_event = {
+	id = sxx_other_event.340
+	title = sxx_other_event.340.name
+	desc = sxx_other_event.340.desc
+	picture = GFX_evt_black_hole
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	option = {
+		name = sxx_other_event.340.a
+		from = {
+			enable_special_project = {
+				name = "SXX_GET_OBJECT_NEAR_BLACK_HOLE"
+				location = this
+				owner = root.owner
+			}
+		}
+	}
+	option = {
+		name = sxx_other_event.340.b
+		trigger = {
+			owner = {
+				is_sxx_dujie_country = yes
+				any_owned_pop = {
+					has_pop_flag = sxx_dujie
+				}
+			}
+		}
+		owner = {
+			country_event = { id = sxx_other_event.346 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.345
+	title = sxx_other_event.345.name
+	desc = sxx_other_event.345.desc
+	picture = GFX_evt_black_hole
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	after = {
+		custom_tooltip = sxx_get_practice_21_tooltip
+		hidden_effect = {
+			owner = { set_country_flag = sxx_get_practice_21 }
+		}
+	}
+
+	option = {
+		name = sxx_other_event.345.a
+	}
+	option = {
+		name = sxx_other_event.345.b
+		trigger = {
+			is_sxx_final_country = yes
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.346
+	title = sxx_other_event.345.name
+	desc = sxx_other_event.346.desc
+	picture = GFX_evt_black_hole
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	after = {
+		custom_tooltip = sxx_get_practice_21_tooltip
+		hidden_effect = {
+			owner = { set_country_flag = sxx_get_practice_21 }
+		}
+	}
+
+	option = {
+		name = sxx_other_event.345.a
+	}
+	option = {
+		name = sxx_other_event.345.b
+		trigger = {
+			is_sxx_final_country = yes
 		}
 	}
 }

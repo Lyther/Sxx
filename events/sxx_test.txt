@@ -914,6 +914,7 @@ country_event = {
 	custom_gui = sxx_practice_ui
 
 	immediate = {
+		set_country_flag = sxx_get_practice_21
 		set_country_flag = sxx_get_practice_22
 		set_country_flag = sxx_get_practice_23
 		add_resource = {

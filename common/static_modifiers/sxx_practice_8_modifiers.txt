@@ -30,7 +30,7 @@
 
 sxx_practice_modifier_8_1_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_1_1 = {
@@ -42,7 +42,7 @@ sxx_practice_modifier_8_1_1 = {
 
 sxx_practice_modifier_8_2_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_8_2_1 = {
@@ -54,7 +54,7 @@ sxx_practice_modifier_8_2_1 = {
 
 sxx_practice_modifier_8_3_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_3_1 = {
@@ -66,7 +66,7 @@ sxx_practice_modifier_8_3_1 = {
 
 sxx_practice_modifier_8_4_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_4_1 = {
@@ -78,7 +78,7 @@ sxx_practice_modifier_8_4_1 = {
 
 sxx_practice_modifier_8_5_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 	
 sxx_practice_modifier_8_5_1 = {
@@ -90,7 +90,7 @@ sxx_practice_modifier_8_5_1 = {
 
 sxx_practice_modifier_8_6_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_6_1 = {
@@ -102,7 +102,7 @@ sxx_practice_modifier_8_6_1 = {
 
 sxx_practice_modifier_8_7_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_7_1 = {
@@ -114,7 +114,7 @@ sxx_practice_modifier_8_7_1 = {
 
 sxx_practice_modifier_8_8_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.1
 }
 
 sxx_practice_modifier_8_8_1 = {
@@ -126,7 +126,7 @@ sxx_practice_modifier_8_8_1 = {
 
 sxx_practice_modifier_8_9_0 = {
 	hide_from_country_list = yes
-	planet_sxx_factotum_disciples_food_produces_mult = 0.2
+	planet_sxx_xiuxian_jobs_food_produces_mult = 0.2
 }
 
 sxx_practice_modifier_8_9_1 = {

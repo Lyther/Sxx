@@ -1,0 +1,260 @@
+sxx_button_practice_32_1_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 1 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_1_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_1_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_2_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 2 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_2_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_2_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_3_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 3 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_3_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_3_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_4_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 4 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_4_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_4_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_5_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 5 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_5_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_5_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_6_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 6 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_6_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_6_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_7_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 7 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_7_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_7_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_8_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 8 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_8_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_8_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_9_effect_0 = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value >= 9 }
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		tooltip = {
+			add_modifier = { modifier = sxx_practice_modifier_32_9_0 }
+			add_modifier = { modifier = sxx_practice_modifier_32_9_1 }
+		}
+	}
+}
+
+sxx_button_practice_32_1_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 1 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 0 STATE = final GONGFA = 100000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 1 GONGFA = -100000000 }
+	}
+}
+
+sxx_button_practice_32_2_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 2 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 1 STATE = final GONGFA = 200000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 2 GONGFA = -200000000 }
+	}
+}
+
+sxx_button_practice_32_3_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 3 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 2 STATE = final GONGFA = 300000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 3 GONGFA = -300000000 }
+	}
+}
+
+sxx_button_practice_32_4_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 4 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 3 STATE = final GONGFA = 400000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 4 GONGFA = -400000000 }
+	}
+}
+
+sxx_button_practice_32_5_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 5 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 4 STATE = final GONGFA = 500000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 5 GONGFA = -500000000 }
+	}
+}
+
+sxx_button_practice_32_6_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 6 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 5 STATE = final GONGFA = 600000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 6 GONGFA = -600000000 }
+	}
+}
+
+sxx_button_practice_32_7_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 7 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 6 STATE = final GONGFA = 700000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 7 GONGFA = -700000000 }
+	}
+}
+
+sxx_button_practice_32_8_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 8 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 7 STATE = final GONGFA = 800000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 8 GONGFA = -800000000 }
+	}
+}
+
+sxx_button_practice_32_9_effect = {
+	potential = {
+		check_variable = { which = sxx_practice_32 value < 9 }
+	}
+	allow = {
+		sxx_get_practice_trigger = { NUM = 32 LEVEL = 8 STATE = final GONGFA = 900000000 }
+	}
+
+	effect = {
+		sxx_get_practice_effect = { NUM = 32 LEVEL = 9 GONGFA = -900000000 }
+	}
+}

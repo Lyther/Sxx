@@ -235,12 +235,12 @@ sxx_call_pop_effect = {
 					]
 					planet = {
 						is_occupied_flag = no
-						NOT = { is_same_value = root }
+						NOT = { is_same_value = prevprevprev }
 					}
 				}
 				resettle_pop = {
 					pop = this
-					planet = root
+					planet = prevprev
 				}
 			}
 		}

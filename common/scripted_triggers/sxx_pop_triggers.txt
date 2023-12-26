@@ -229,8 +229,11 @@ sxx_pop_is_robot_can_be_upgraded = {
 }
 
 is_sxx_cultivable_cultivator = {
-	is_variable_set = sxx_pop_state
-	is_sxx_cultivable = yes
+	custom_tooltip = {
+		text = text_is_sxx_cultivable_cultivator
+		is_variable_set = sxx_pop_state
+		is_sxx_cultivable = yes
+	}
 }
 
 is_sxx_robot_not_cultivable = {

@@ -96,7 +96,7 @@
  pop_cat_sxx_sealer_plural:0"封印者"
  pop_cat_sxx_sealer_desc:0"为了抵抗████，他们自愿来到这里，奉献他们生命最后的时光。"
  pop_category_sxx_sealer:0 "封印者生活标准"
- mod_pop_cat_sxx_sealer_political_power:0 "$pop_cat_sxx_sealer$政治权力"
+ mod_pop_cat_sxx_sealer_political_power:0 "£political_power£ £pop_cat_sxx_sealer£$pop_cat_sxx_sealer_plural$政治权力"
  mod_pop_cat_sxx_sealer_happiness:0 "$pop_cat_sxx_sealer$幸福度"
 
  job_sxx_sealer:0"$pop_cat_sxx_sealer$"

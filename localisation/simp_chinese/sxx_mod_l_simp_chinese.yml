@@ -17,6 +17,13 @@
  mod_planet_sxx_xiuxian_jobs_produces_mult:0"修仙者岗位产出"
  mod_planet_sxx_xiuxian_jobs_upkeep_mult:0"修仙者岗位维护费"
 
+ mod_planet_sxx_xiuxian_jobs_energy_produces_mult:0"修仙者岗位生产的£energy£ $energy$"
+ mod_planet_sxx_xiuxian_jobs_minerals_produces_mult:0"修仙者岗位生产的£minerals£ $minerals$"
+ mod_planet_sxx_xiuxian_jobs_food_produces_mult:0"修仙者岗位生产的£food£ $food$"
+ mod_planet_sxx_xiuxian_jobs_physics_research_produces_mult:0"修仙者岗位生产的£physics_research£ $physics_research$"
+ mod_planet_sxx_xiuxian_jobs_society_research_produces_mult:0"修仙者岗位生产的£society_research£ $society_research$"
+ mod_planet_sxx_xiuxian_jobs_engineering_research_produces_mult:0"修仙者岗位生产的£engineering_research£ $engineering_research$"
+
  mod_planet_artisans_food_upkeep_add:0"[GetArtisanIcon] [GetArtisanPlural]的£food£ $food$维护费"
 
  mod_country_base_sxx_stones_produces_add:1 "每月£sxx_stones£ $sxx_stones$"
@@ -40,6 +47,7 @@
  mod_planet_district_sxx_hab_stones_making_build_speed_mult:0 "$district_sxx_hab_stones_making$建造速度"
 
  mod_planet_district_sxx_lingyao_build_speed_mult:0"$district_sxx_lingyao$建造速度"
+ mod_planet_district_sxx_rw_lingyao_build_speed_mult:0 "$district_sxx_rw_lingyao$建造速度"
  mod_planet_district_sxx_hab_lingyao_build_speed_mult:0"$district_sxx_hab_lingyao$建造速度"
 
  mod_planet_sxx_stones_makers_upkeep_mult:0"£job_sxx_stones_maker£ $job_sxx_stones_maker_plural$维护费"
@@ -70,6 +78,7 @@
  mod_planet_sxx_stones_miners_4_minerals_produces_add:0"$mod_planet_sxx_stones_miners_4_minerals_produces_mult$"
 
  mod_planet_sxx_stones_makers_produces_mult:0"£job_sxx_stones_maker£$job_sxx_stones_maker_plural$产出"
+ mod_planet_sxx_stones_makers_sxx_stones_produces_mult:0"来自£job_sxx_stones_maker£$job_sxx_stones_maker_plural$的£sxx_stones£$sxx_stones$"
 
  mod_planet_sxx_secular_stones_miners_1_sxx_stones_produces_mult:0"来自£job_sxx_secular_stones_miner_1£ $job_sxx_secular_stones_miner_1_plural$的£sxx_stones£$sxx_stones$"
  mod_planet_sxx_secular_stones_miners_2_sxx_stones_produces_mult:0"来自£job_sxx_secular_stones_miner_2£ $job_sxx_secular_stones_miner_2_plural$的£sxx_stones£$sxx_stones$"
@@ -102,10 +111,12 @@
  mod_planet_researchers_sxx_gongfa_produces_add:0"£job_researcher£ [GetResearcherPlural]产出的£sxx_gongfa£ $sxx_gongfa$"
 
  mod_planet_sxx_pills_makers_produces_mult:0"£job_sxx_pills_maker£$job_sxx_pills_maker_plural$产出"
+ mod_planet_sxx_pills_makers_upkeep_mult:0"£job_sxx_pills_maker£$job_sxx_pills_maker_plural$维护费"
  mod_planet_sxx_pills_makers_sxx_pills_produces_mult:0"来自£job_sxx_pills_maker£$job_sxx_pills_maker_plural$的£sxx_pills£$sxx_pills$"
  mod_planet_sxx_pills_makers_sxx_pills_produces_add:0"$mod_planet_sxx_pills_makers_sxx_pills_produces_mult$"
 
  mod_planet_sxx_weapon_refiners_produces_mult:0"£job_sxx_weapon_refiner£$job_sxx_weapon_refiner_plural$产出"
+ mod_planet_sxx_weapon_refiners_upkeep_mult:0"£job_sxx_weapon_refiner£$job_sxx_weapon_refiner_plural$维护费"
  mod_planet_sxx_weapon_refiners_alloys_produces_mult:0"来自£job_sxx_weapon_refiner£$job_sxx_weapon_refiner_plural$的£alloys£$alloys$"
  mod_planet_sxx_weapon_refiners_alloys_produces_add:0"$mod_planet_sxx_weapon_refiners_alloys_produces_mult$"
  mod_planet_sxx_weapon_refiners_consumer_goods_produces_mult:0"来自£job_sxx_weapon_refiner£$job_sxx_weapon_refiner_plural$的£consumer_goods£$consumer_goods$"
@@ -113,6 +124,8 @@
 
  mod_planet_sxx_array_masters_upkeep_mult:0"£job_sxx_array_master£ $job_sxx_array_master_plural$维护费"
  mod_planet_sxx_array_masters_sxx_stones_upkeep_mult:0"£job_sxx_array_master£ $job_sxx_array_master_plural$的£sxx_stones£ $sxx_stones$维护费"
+
+ mod_planet_sxx_kuilei_jobs_upkeep_mult:0"$planet_sxx_kuilei_jobs$维护费"
 
  mod_planet_sxx_xundaos_produces_mult:0"£job_sxx_xundao£ $job_sxx_xundao_plural$产出"
 

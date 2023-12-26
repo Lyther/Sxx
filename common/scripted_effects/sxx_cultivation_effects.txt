@@ -1416,59 +1416,69 @@ sxx_planet_kuilei_upgrade_effect = {
 			owner = { has_valid_civic = civic_sxx_kuilei }
 			has_modifier = sxx_kuilei_upgrading_modifier
 		}
-		while = {
-			count = value:sxx_planet_kuilei_assembly_value_round
-			random_owned_pop = {
-				limit = {
+		if = {
+			limit = {
+				any_owned_pop = {
 					sxx_pop_is_robot_can_be_upgraded = yes
 				}
-				weights = {
-					base = 1
-					modifier = {
-						add = 9
-						is_sxx_potential_depletion = yes
+			}
+			while = {
+				count = value:sxx_planet_kuilei_assembly_value_round
+				random_owned_pop = {
+					limit = {
+						sxx_pop_is_robot_can_be_upgraded = yes
 					}
-					modifier = {
-						add = 99
-						check_variable = {
-							which = sxx_pop_xp
-							value >= value:sxx_pop_xp_max
+					weights = {
+						base = 1
+						modifier = {
+							add = 99
+							is_sxx_potential_depletion = yes
+						}
+						modifier = {
+							add = 999
+							check_variable = {
+								which = sxx_pop_xp
+								value >= value:sxx_pop_xp_max
+							}
 						}
 					}
-				}
-				if = {
-					limit = {
-						is_sxx_potential_depletion = yes
+					if = {
+						limit = {
+							is_sxx_potential_depletion = yes
+						}
+						sxx_pop_remove_potential_depletion = yes
 					}
-					sxx_pop_remove_potential_depletion = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							which = sxx_pop_xp
-							value >= value:sxx_pop_xp_max
+					else_if = {
+						limit = {
+							check_variable = {
+								which = sxx_pop_xp
+								value >= value:sxx_pop_xp_max
+							}
+						}
+						switch = {
+							trigger = has_pop_flag
+							sxx_lianqi = { sxx_pop_break_to_zhuji = yes }
+							sxx_zhuji = { sxx_pop_break_to_jindan = yes }
+							sxx_jindan = { sxx_pop_break_to_yuanying = yes }
+							sxx_yuanying = { sxx_pop_break_to_huashen = yes }
+							sxx_huashen = { sxx_pop_break_to_lianxu = yes }
+							sxx_lianxu = { sxx_pop_break_to_heti = yes }
+							sxx_heti = { sxx_pop_break_to_dacheng = yes }
+							sxx_dacheng = { sxx_pop_break_to_dujie = yes }
 						}
 					}
-					switch = {
-						trigger = has_pop_flag
-						sxx_lianqi = { sxx_pop_break_to_zhuji = yes }
-						sxx_zhuji = { sxx_pop_break_to_jindan = yes }
-						sxx_jindan = { sxx_pop_break_to_yuanying = yes }
-						sxx_yuanying = { sxx_pop_break_to_huashen = yes }
-						sxx_huashen = { sxx_pop_break_to_lianxu = yes }
-						sxx_lianxu = { sxx_pop_break_to_heti = yes }
-						sxx_heti = { sxx_pop_break_to_dacheng = yes }
-						sxx_dacheng = { sxx_pop_break_to_dujie = yes }
+					else = {
+						change_variable = {
+							which = sxx_pop_xp
+							value = planet.value:sxx_planet_kuilei_upgrade_xp_add
+						}
+						sxx_set_pop_xp_max_if_over_max = yes
 					}
-				}
-				else = {
-					change_variable = {
-						which = sxx_pop_xp
-						value = planet.value:sxx_planet_kuilei_upgrade_xp_add
-					}
-					sxx_set_pop_xp_max_if_over_max = yes
 				}
 			}
+		}
+		else = {
+			remove_modifier = sxx_kuilei_upgrading_modifier
 		}
 	}
 }

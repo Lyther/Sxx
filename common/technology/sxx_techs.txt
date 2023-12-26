@@ -1076,24 +1076,24 @@ tech_sxx_stones_machine_3 = {
 	}
 }
 
-tech_sxx_stones_energy_plant = {
-	cost = @tier3cost3
-	area = physics
+tech_sxx_lingyao = {
+	cost = @tier3cost1
+	area = society
 	tier = 3
-	category = { field_manipulation }
-	weight = @tier3weight3
-	is_rare = yes
+	category = { biology }
+	weight = @tier3weight1
+	#is_rare = yes
 
 	potential = {
 		is_sxx_huashen_country = yes
 	}
 
 	weight_modifier = {
-		factor = 0.25
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
+		#factor = 0.25
+		#modifier = {
+		#	factor = @ap_technological_ascendancy_rare_tech
+		#	has_ascension_perk = ap_technological_ascendancy
+		#}
 	}
 
 	ai_weight = {
@@ -1101,12 +1101,12 @@ tech_sxx_stones_energy_plant = {
 	}
 }
 
-tech_sxx_lingyao = {
-	cost = @tier3cost3
-	area = society
+tech_sxx_stones_energy_plant = {
+	cost = @tier3cost2
+	area = physics
 	tier = 3
-	category = { biology }
-	weight = @tier3weight3
+	category = { field_manipulation }
+	weight = @tier3weight2
 	is_rare = yes
 
 	potential = {
@@ -1127,11 +1127,11 @@ tech_sxx_lingyao = {
 }
 
 tech_sxx_pills_processing_center = {
-	cost = @tier3cost3
+	cost = @tier3cost2
 	area = engineering
 	tier = 3
 	category = { industry }
-	weight = @tier3weight3
+	weight = @tier3weight2
 	is_rare = yes
 
 	potential = {

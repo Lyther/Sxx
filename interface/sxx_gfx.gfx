@@ -131,6 +131,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_kuilei.dds"
 	}
 	spriteType = {
+		name = "GFX_leader_trait_sxx_canbao"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_canbao.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_xianmiao"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_xianmiao.dds"
+	}
+	spriteType = {
 		name = "GFX_leader_trait_sxx_wuchi"
 		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_wuchi.dds"
 	}

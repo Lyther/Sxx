@@ -114,6 +114,24 @@ sxx_remove_main_practice_modifier = {
 		}
 		sxx_remove_main_practice_modifier_effect = { NUM = 24 }
 	}
+	else_if = {
+		limit = {
+			check_variable = { which = sxx_main_select value = 30 }
+		}
+		sxx_remove_main_practice_modifier_effect = { NUM = 30 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = sxx_main_select value = 31 }
+		}
+		sxx_remove_main_practice_modifier_effect = { NUM = 31 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = sxx_main_select value = 32 }
+		}
+		sxx_remove_main_practice_modifier_effect = { NUM = 32 }
+	}
 }
 
 sxx_add_main_practice_modifier = {

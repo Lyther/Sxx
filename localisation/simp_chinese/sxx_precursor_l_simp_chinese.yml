@@ -173,7 +173,7 @@
 
  r_sxx_sword_tomb:0"天殇剑冢"
  r_sxx_sword_tomb_desc:0"万剑山无数门人以及山主陨落后形成的剑冢，充满了无尽的煞气，意志不坚者一靠近就会心神失守。可以借此磨砺意志，突破瓶颈。"
- relic_sxx_sword_tomb_active:0"所有潜力耗尽的人口§G20%§!概率移除潜力耗尽修正"
+ relic_sxx_sword_tomb_active:0"所有潜力耗尽的人口§G25%§!概率移除潜力耗尽修正"
 
  artifact_sxx_precursor2_research:0 "万剑山的秘密"
  artifact_sxx_precursor2_research_desc:0 "深入探究万剑山的秘密。"
@@ -455,7 +455,7 @@ sxx_precursor5_chain_title:0 "修仙先驱者——观天阁"
  sxx_precursor.902.desc.b:1 "根据我们的调查数据显示，这片寂静到令人内心发毛的恒星系是一个叫做“观天阁”的古老宗门的母星系，这里已经被其他最近到访的宇宙文明扫荡过了，现在[FromFrom.GetPlanetMoon]上已经没有任何有价值的残骸了。"
 
  sxx_precursor.905.name:0 "目光留影"
- sxx_precursor.905.desc:1 "汇报完毕后，科学专员[sxx_leader_will_be_killed.GetName]脸上的肌肉突然扭曲了起来。“祂在看着我……祂在看着我……哈哈哈！哈哈哈哈哈！祂在看着我啊……！！！”\n\n[sxx_leader_will_be_killed.GetName]疯了，我们这才知道有些东西是不能随便看的，哪怕那是一道目光的留影。"
+ sxx_precursor.905.desc:1 "汇报完毕后，科学专员[sxx_leader_will_be_killed.GetName]脸上的肌肉突然扭曲了起来。“祂在看着我……祂在看着我……哈哈哈！哈哈哈哈哈！祂在看着我啊……！！！”\n\n……\n\n[sxx_leader_will_be_killed.GetName]疯了，我们这才知道有些东西是不能随便看的，哪怕那是一道目光的留影。"
  sxx_precursor.905.a:0 "……"
 
  NAME_SXX_Guantian:0"天之眼"

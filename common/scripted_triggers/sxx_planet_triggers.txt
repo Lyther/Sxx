@@ -141,6 +141,14 @@ has_sxx_array = {
 	}
 }
 
+will_sxx_ai_build_zongmen = {
+	OR = {
+		is_capital = yes
+		has_sxx_lingmai = yes
+	}
+	NOT = { is_planet_class = pc_sxx_heaven }
+}
+
 has_sxx_lingmai = {
 	OR = {
 		has_deposit = d_sxx_lingmai_1

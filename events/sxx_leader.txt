@@ -409,25 +409,6 @@ event = {
 	}
 }
 
-# 每年纠正韩立肖像
-event = {
-	id = sxx_leader.15
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		every_country = {
-			every_owned_leader = {
-				limit = {
-					has_leader_flag = sxx_hanli
-				}
-				change_leader_portrait = sxx_hanli
-			}
-		}
-	}
-}
-
 # 夺舍秘法
 country_event = {
 	id = sxx_leader.50
@@ -1113,6 +1094,33 @@ country_event = {
 						which = sxx_hunhuan_count
 						value = 1
 					}
+				}
+			}
+		}
+	}
+}
+
+# 每年纠正领袖肖像
+event = {
+	id = sxx_leader.1000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_leader_flag = sxx_hanli
+					}
+					change_leader_portrait = sxx_hanli
+				}
+				else_if = {
+					limit = {
+						has_leader_flag = sxx_tangsan
+					}
+					change_leader_portrait = sxx_tangsan
 				}
 			}
 		}

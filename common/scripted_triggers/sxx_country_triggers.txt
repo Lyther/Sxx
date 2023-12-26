@@ -205,6 +205,7 @@ has_sxx_precursor_intro = {
 
 has_sxx_special_practice = {
 	OR = {
+		has_country_flag = sxx_get_practice_21
 		has_country_flag = sxx_get_practice_22
 		has_country_flag = sxx_get_practice_23
 		is_variable_set = sxx_origin_system_practice_24_level

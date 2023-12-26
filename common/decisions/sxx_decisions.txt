@@ -356,12 +356,55 @@ decision_sxx_array = {
 		weight = 0
 		modifier = {
 			add = 500
-			NOT = { has_modifier = sxx_array_juling }
 			owner = {
-				resource_stockpile_compare = { resource = sxx_stones value >= 2000 }
-				resource_stockpile_compare = { resource = consumer_goods value >= 1000 }
+				resource_stockpile_compare = { resource = sxx_stones value >= 10000 }
+				resource_stockpile_compare = { resource = consumer_goods value >= 5000 }
 			}
 			any_owned_pop = { has_job = sxx_array_master }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					OR = {
+						has_orbital_bombardment = no
+						owner = { NOT = { has_technology = tech_sxx_array_huzong } }
+					}
+					OR = {
+						is_capital = yes
+						owner = { NOT = { has_technology = tech_sxx_array_yangchun } }
+					}
+					has_modifier = sxx_array_ningshen
+				}
+				AND = {
+					OR = {
+						has_orbital_bombardment = no
+						owner = { NOT = { has_technology = tech_sxx_array_huzong } }
+					}
+					OR = {
+						is_capital = no
+						owner = { NOT = { has_technology = tech_sxx_array_ningshen } }
+					}
+					has_modifier = sxx_array_yangchun
+				}
+				AND = {
+					has_orbital_bombardment = yes
+					has_modifier = sxx_array_huzong
+				}
+				AND = {
+					OR = {
+						has_orbital_bombardment = no
+						owner = { NOT = { has_technology = tech_sxx_array_huzong } }
+					}
+					owner = {
+						NOR = {
+							has_technology = tech_sxx_array_ningshen
+							has_technology = tech_sxx_array_yangchun
+						}
+					}
+					has_modifier = sxx_array_juling
+				}
+			}
 		}
 	}
 }
@@ -676,9 +719,6 @@ decision_sxx_cancel_upgrade_kuilei = {
 		modifier = {
 			factor = 0
 			has_valid_civic = civic_sxx_kuilei
-			any_owned_pop = {
-				sxx_pop_is_robot_can_be_upgraded = yes
-			}
 		}
 	}
 }

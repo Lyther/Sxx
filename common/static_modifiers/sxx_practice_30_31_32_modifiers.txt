@@ -1,0 +1,276 @@
+################# 天书·卷一 ######################
+
+sxx_practice_modifier_30_1_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+
+sxx_practice_modifier_30_1_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_2_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+	
+sxx_practice_modifier_30_2_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_3_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+
+sxx_practice_modifier_30_3_1 = {
+    hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_4_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+
+sxx_practice_modifier_30_4_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_5_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+	
+sxx_practice_modifier_30_5_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_6_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+
+sxx_practice_modifier_30_6_1 = {
+    hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_7_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+
+sxx_practice_modifier_30_7_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_8_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.05
+}
+	
+sxx_practice_modifier_30_8_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_30_9_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_30_9_1 = {
+    hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+################# 天书·卷二 ######################
+
+sxx_practice_modifier_31_1_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_1_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_2_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_2_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_3_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_3_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_4_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_4_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_5_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_5_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_6_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_6_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_7_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_7_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_8_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+}
+
+sxx_practice_modifier_31_8_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_31_9_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_31_9_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+
+################# 天书·卷三 ######################
+
+sxx_practice_modifier_32_1_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_1_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_2_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_2_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_3_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_3_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_4_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_4_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_5_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_5_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_6_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_6_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_7_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_7_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_8_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.2
+}
+
+sxx_practice_modifier_32_8_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}
+
+sxx_practice_modifier_32_9_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.4
+}
+
+sxx_practice_modifier_32_9_1 = {
+	hide_from_country_list = yes
+	custom_tooltip = sxx_practice_modifier_no_effect_tooltip
+}

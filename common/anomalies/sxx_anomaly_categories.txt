@@ -37,3 +37,49 @@ sxx_cat_monster_category = {
 
 	on_success = sxx_other_event.300
 }
+
+sxx_longly_cultivator_category = {
+	desc = sxx_longly_cultivator_category_desc
+	picture = GFX_evt_alien_ruins
+	level = 6
+	max_once_global = yes
+	max_once = yes
+
+	spawn_chance = {
+		modifier = {
+			add = 5
+			habitable_planet_not_urban = yes
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				is_sxx_sect = no
+			}
+		}
+	}
+
+	on_success = sxx_other_event.320
+}
+
+sxx_black_hole_edge_category = {
+	desc = sxx_black_hole_edge_category_desc
+	picture = GFX_evt_black_hole
+	level = 8
+	max_once_global = yes
+	max_once = yes
+
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_black_hole
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				is_sxx_sect = no
+			}
+		}
+	}
+
+	on_success = sxx_other_event.340
+}

@@ -48,8 +48,8 @@ on_yearly_pulse = {
 		sxx_origin.20
 		sxx_origin.30
 		sxx_leader.10
-		sxx_leader.15
 		sxx_leader.100 # 进阶灵脉
+		sxx_leader.1000
 		sxx_evil_invasion.100
 		sxx_crisis.65
 		sxx_crisis.1065
@@ -61,6 +61,7 @@ on_yearly_pulse = {
 on_yearly_pulse_country = {
 	events = {
 		sxx_event.6
+		sxx_event.90
 		sxx_fairy.170 # 迁移散仙
 		sxx_break.100
 		sxx_break.105
@@ -140,6 +141,7 @@ on_pop_assembled = {
 # Scope = Planet
 on_colonized = {
 	events = {
+		sxx_event.15
 		sxx_event.21
 		sxx_task.30
 	}

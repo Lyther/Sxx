@@ -797,6 +797,18 @@ sxx_show_pop_cultivation_data = {
 						multiplier = value:sxx_pop_xp_max
 						days = 30
 					}
+					switch = {
+						trigger = has_pop_flag
+						sxx_lianqi = { sxx_add_pop_little_state_modidier_effect = { STATE = 1 } }
+						sxx_zhuji = { sxx_add_pop_little_state_modidier_effect = { STATE = 2 } }
+						sxx_jindan = { sxx_add_pop_little_state_modidier_effect = { STATE = 3 } }
+						sxx_yuanying = { sxx_add_pop_little_state_modidier_effect = { STATE = 4 } }
+						sxx_huashen = { sxx_add_pop_little_state_modidier_effect = { STATE = 5 } }
+						sxx_lianxu = { sxx_add_pop_little_state_modidier_effect = { STATE = 6 } }
+						sxx_heti = { sxx_add_pop_little_state_modidier_effect = { STATE = 7 } }
+						sxx_dacheng = { sxx_add_pop_little_state_modidier_effect = { STATE = 8 } }
+						sxx_dujie = { sxx_add_pop_little_state_modidier_effect = { STATE = 9 } }
+					}
 				}
 				else_if = {
 					limit = {
@@ -816,6 +828,12 @@ sxx_show_pop_cultivation_data = {
 						modifier = sxx_pop_xp_max_show
 						multiplier = value:sxx_fairy_pop_xp_max
 						days = 30
+					}
+					switch = {
+						trigger = has_pop_flag
+						sxx_zhenxian = { sxx_add_pop_little_state_modidier_effect = { STATE = 10 } }
+						sxx_xianwang = { sxx_add_pop_little_state_modidier_effect = { STATE = 11 } }
+						sxx_xiandi = { sxx_add_pop_little_state_modidier_effect = { STATE = 12 } }
 					}
 				}
 			}
